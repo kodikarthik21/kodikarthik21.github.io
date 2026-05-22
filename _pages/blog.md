@@ -1,8 +1,8 @@
----
+![alt text](image.png)---
 layout: default
 permalink: /blog/
 title: blog
-nav: true
+nav: false
 nav_order: 1
 pagination:
   enabled: true
@@ -31,28 +31,30 @@ pagination:
 
 {% if site.display_tags and site.display_tags.size > 0 or site.display_categories and site.display_categories.size > 0 %}
 
-  <div class="tag-category-list">
-    <ul class="p-0 m-0">
-      {% for tag in site.display_tags %}
-        <li>
-          <i class="fa-solid fa-hashtag fa-sm"></i> <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">{{ tag }}</a>
-        </li>
-        {% unless forloop.last %}
-          <p>&bull;</p>
-        {% endunless %}
-      {% endfor %}
-      {% if site.display_categories.size > 0 and site.display_tags.size > 0 %}
-        <p>&bull;</p>
-      {% endif %}
-      {% for category in site.display_categories %}
-        <li>
-          <i class="fa-solid fa-tag fa-sm"></i> <a href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">{{ category }}</a>
-        </li>
-        {% unless forloop.last %}
-          <p>&bull;</p>
-        {% endunless %}
-      {% endfor %}
-    </ul>
+  <div class="tag-category-dropdowns">
+    {% if site.display_tags and site.display_tags.size > 0 %}
+      <div class="dropdown-item">
+        <label for="blog-tags">Browse tags</label>
+        <select id="blog-tags" onchange="if (this.value) window.location.href = this.value">
+          <option value="">Select a tag...</option>
+          {% for tag in site.display_tags %}
+            <option value="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">{{ tag }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    {% endif %}
+
+    {% if site.display_categories and site.display_categories.size > 0 %}
+      <div class="dropdown-item">
+        <label for="blog-categories">Browse categories</label>
+        <select id="blog-categories" onchange="if (this.value) window.location.href = this.value">
+          <option value="">Select a category...</option>
+          {% for category in site.display_categories %}
+            <option value="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">{{ category }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    {% endif %}
   </div>
   {% endif %}
 
