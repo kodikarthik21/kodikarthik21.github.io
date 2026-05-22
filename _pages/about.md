@@ -4,6 +4,9 @@ title: about
 permalink: /
 subtitle: 
 
+toc:
+  sidebar: right
+
 profile:
   align: right
   image: prof_pic.jpg
@@ -30,21 +33,17 @@ Let's connect! Feel free to reach out via my LinkedIn.
     <hr class="my-2" />
 
     <div class="about-details mb-3">
-      <div class="about-summary">
-        <div class="d-flex align-items-start gap-2">
-          <!-- Logo Column -->
+      <div class="about-summary custom-logo-entry">
+        <div>
           <div style="flex-shrink: 0; width: 75px; text-align: center;">
             <img src="/assets/img/cmu_logo.png" alt="Carnegie Mellon University" style="max-width: 100%; height: auto; border-radius: 6px;">
           </div>
-          <!-- Content Column -->
-          <div style="flex: 1; display: flex; align-items: start; gap: 28rem;">
-            <div>
-              <h4 class="h6 mb-1">Carnegie Mellon University</h4>
-              <p class="mb-0 text-secondary" style="font-size: 0.9rem;">MS in Robotic Systems Development</p>
-            </div>
-            <div class="text-end" style="flex-shrink: 0; margin-left: auto;">
-              <p class="mb-0 text-secondary" style="font-size: 0.9rem;">2025 – Present</p>
-            </div>
+          <div>
+            <h4 class="h6 mb-1">Carnegie Mellon University</h4>
+            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">MS in Robotic Systems Development</p>
+          </div>
+          <div class="text-end" style="flex-shrink: 0;">
+            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">2025 – Present</p>
           </div>
         </div>
       </div>
@@ -57,21 +56,17 @@ Let's connect! Feel free to reach out via my LinkedIn.
     </div>
 
     <div class="about-details">
-      <div class="about-summary">
-        <div class="d-flex align-items-start gap-2">
-          <!-- Logo Column -->
+      <div class="about-summary custom-logo-entry">
+        <div>
           <div style="flex-shrink: 0; width: 75px; text-align: center;">
             <img src="/assets/img/iitm_logo.jpg" alt="Indian Institute of Technology Madras" style="max-width: 100%; height: auto; border-radius: 6px;">
           </div>
-          <!-- Content Column -->
-          <div style="flex: 1; display: flex; align-items: start; gap: 27rem;">
-            <div>
-              <h4 class="h6 mb-1">Indian Institute of Technology Madras</h4>
-              <p class="mb-0 text-secondary" style="font-size: 0.9rem;">B.Tech Mechanical Engineering + <br>M.Tech Data Science</p>
-            </div>
-            <div class="text-end" style="flex-shrink: 0; margin-left: auto;">
-              <p class="mb-0 text-secondary" style="font-size: 0.9rem;">2018 – 2023</p>
-            </div>
+          <div>
+            <h4 class="h6 mb-1">Indian Institute of Technology Madras</h4>
+            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">B.Tech Mechanical Engineering + <br>M.Tech Data Science</p>
+          </div>
+          <div class="text-end" style="flex-shrink: 0;">
+            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">2018 – 2023</p>
           </div>
         </div>
       </div>
@@ -91,25 +86,21 @@ Let's connect! Feel free to reach out via my LinkedIn.
     </div>
     <hr class="my-2" />
 
-    <div class="about-details">
-      <div class="about-summary">
-        <div class="d-flex align-items-start gap-2">
-          <!-- Logo Column -->
+      <div class="about-details">
+      <div class="about-summary custom-logo-entry">
+        <div>
           <div style="flex-shrink: 0; width: 75px; text-align: center;">
             <img src="/assets/img/hsbc_logo.png" alt="HSBC" style="max-width: 100%; height: auto; border-radius: 6px;">
           </div>
-          <!-- Content Column -->
-          <div style="flex: 1; display: flex; align-items: flex-start; gap: 29rem;">
-              <div>
-                <h4 class="h6 mb-1">HSBC Global Markets</h4>
-                <p class="mb-0 text-secondary" style="font-size: 0.95rem; font-weight: 600;">Equities Execution Services</p>
-              </div>
-              <div class="text-end" style="flex-shrink: 0; margin-left: auto;">
-                <p class="mb-0 text-secondary" style="font-size: 0.9rem;">Bengaluru, India</p>
-                <p class="mb-0" style="font-size: 0.9rem; color: #adb5bd;">Jul 2023 – Jul 2025</p>
-              </div>
-            </div>
+          <div>
+            <h4 class="h6 mb-1">HSBC Global Markets</h4>
+            <p class="mb-0 text-secondary" style="font-size: 0.95rem; font-weight: 600;">Equities Execution Services</p>
           </div>
+          <div class="text-end" style="flex-shrink: 0;">
+            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">Bengaluru, India</p>
+            <p class="mb-0" style="font-size: 0.9rem; color: #adb5bd;">Jul 2023 – Jul 2025</p>
+          </div>
+        </div>
       </div>
     <div class="about-details-panel mt-3">
       
@@ -147,22 +138,18 @@ Let's connect! Feel free to reach out via my LinkedIn.
     <hr class="my-2" />
 
     <div class="about-details mb-3">
-      <div class="about-summary">
-        <div class="d-flex align-items-start gap-2">
-          <!-- Logo Column -->
+      <div class="about-summary custom-logo-entry">
+        <div>
           <div style="flex-shrink: 0; width: 75px; text-align: center;">
             <img src="/assets/img/mathlogic_logo.jpg" alt="Mathlogic Consulting Services" style="max-width: 100%; height: auto; border-radius: 6px;">
           </div>
-          <!-- Content Column -->
-          <div style="flex: 1; display: flex; align-items: start; gap: 27rem;">
-            <div>
-              <h4 class="h6 mb-1">Mathlogic Consulting Services</h4>
-              <p class="mb-0 text-secondary" style="font-size: 0.9rem;">Deep Learning Internship</p>
-            </div>
-            <div class="text-end" style="flex-shrink: 0; margin-left: auto;">
-              <p class="mb-0 text-secondary" style="font-size: 0.9rem;">Gurugram, India</p>
-              <p class="mb-0 text-secondary" style="font-size: 0.9rem;">May 2021 – Jul 2021</p>
-            </div>
+          <div>
+            <h4 class="h6 mb-1">Mathlogic Consulting Services</h4>
+            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">Deep Learning Internship</p>
+          </div>
+          <div class="text-end" style="flex-shrink: 0;">
+            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">Gurugram, India</p>
+            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">May 2021 – Jul 2021</p>
           </div>
         </div>
       </div>
@@ -176,22 +163,18 @@ Let's connect! Feel free to reach out via my LinkedIn.
     </div>
 
     <div class="about-details mb-3">
-      <div class="about-summary">
-        <div class="d-flex align-items-start gap-2">
-          <!-- Logo Column -->
+      <div class="about-summary custom-logo-entry">
+        <div>
           <div style="flex-shrink: 0; width: 75px; text-align: center;">
             <img src="/assets/img/tuberlin_logo.png" alt="TU Berlin" style="max-width: 100%; height: auto; border-radius: 6px;">
           </div>
-          <!-- Content Column -->
-          <div style="flex: 1; display: flex; align-items: start; gap: 22rem;">
-            <div>
-              <h4 class="h6 mb-1">Technische Universitat Berlin</h4>
-              <p class="mb-0 text-secondary" style="font-size: 0.9rem;">DAAD-WISE internship, Control Systems Group</p>
-            </div>
-            <div class="text-end" style="flex-shrink: 0; margin-left: auto;">
-              <p class="mb-0 text-secondary" style="font-size: 0.9rem;">Berlin, Germany</p>
-              <p class="mb-0 text-secondary" style="font-size: 0.9rem;">May 2022 – Jul 2022</p>
-            </div>
+          <div>
+            <h4 class="h6 mb-1">Technische Universitat Berlin</h4>
+            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">DAAD-WISE internship, Control Systems Group</p>
+          </div>
+          <div class="text-end" style="flex-shrink: 0;">
+            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">Berlin, Germany</p>
+            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">May 2022 – Jul 2022</p>
           </div>
         </div>
       </div>
@@ -204,22 +187,18 @@ Let's connect! Feel free to reach out via my LinkedIn.
     </div>
 
     <div class="about-details mb-3">
-      <div class="about-summary">
-        <div class="d-flex align-items-start gap-2">
-          <!-- Logo Column -->
+      <div class="about-summary custom-logo-entry">
+        <div>
           <div style="flex-shrink: 0; width: 75px; text-align: center;">
             <img src="/assets/img/osu_logo.jpg" alt="Ohio State University" style="max-width: 100%; height: auto; border-radius: 6px;">
           </div>
-          <!-- Content Column -->
-          <div style="flex: 1; display: flex; align-items: start; gap: 26rem;">
-            <div>
-              <h4 class="h6 mb-1">Ohio State University</h4>
-              <p class="mb-0 text-secondary" style="font-size: 0.9rem;">Research Internship, Movement Lab</p>
-            </div>
-            <div class="text-end" style="flex-shrink: 0; margin-left: auto;">
-              <p class="mb-0 text-secondary" style="font-size: 0.9rem;">Ohio State University</p>
-              <p class="mb-0 text-secondary" style="font-size: 0.9rem;">Dec 2021 – Jan 2022</p>
-            </div>
+          <div>
+            <h4 class="h6 mb-1">Ohio State University</h4>
+            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">Research Internship, Movement Lab</p>
+          </div>
+          <div class="text-end" style="flex-shrink: 0;">
+            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">Ohio State University</p>
+            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">Dec 2021 – Jan 2022</p>
           </div>
         </div>
       </div>
