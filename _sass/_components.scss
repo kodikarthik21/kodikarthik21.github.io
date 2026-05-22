@@ -136,16 +136,29 @@ ul.task-list input[type="checkbox"] {
     }
 
     .about-summary.custom-logo-entry > div {
-      display: flex !important;
-      align-items: flex-start;
-      gap: 0.75rem;
+      display: grid !important;
+      grid-template-columns: minmax(auto, 64px) minmax(0, 1fr) minmax(auto, 150px);
+      gap: 0.5rem;
+      align-items: start;
       width: 100%;
     }
 
+    .about-summary.custom-logo-entry > div > div:first-child {
+      min-width: 64px;
+      width: 64px;
+      text-align: center;
+    }
+
+    .about-summary.custom-logo-entry > div > div:nth-child(2) {
+      min-width: 0;
+    }
+
     .about-summary.custom-logo-entry .text-end {
-      margin-left: auto;
+      margin-left: 0;
       justify-self: end;
       justify-items: end;
+      align-self: start;
+      min-width: 130px;
       text-align: right;
     }
 
@@ -361,6 +374,33 @@ ul.task-list input[type="checkbox"] {
   gap: 1.5rem;
   align-items: center;
   width: 100%;
+}
+
+.about-summary.custom-logo-entry > div {
+  display: grid !important;
+  grid-template-columns: minmax(auto, 64px) minmax(0, 1fr) minmax(auto, 150px);
+  gap: 0.5rem;
+  align-items: start;
+  width: 100%;
+}
+
+.about-summary.custom-logo-entry > div > div:first-child {
+  min-width: 64px;
+  width: 64px;
+  text-align: center;
+}
+
+.about-summary.custom-logo-entry > div > div:nth-child(2) {
+  min-width: 0;
+}
+
+.about-summary.custom-logo-entry .text-end {
+  margin-left: 0;
+  justify-self: end;
+  justify-items: end;
+  align-self: start;
+  min-width: 130px;
+  text-align: right;
 }
 
 .about-summary .text-secondary,
