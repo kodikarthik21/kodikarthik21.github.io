@@ -223,3 +223,13 @@ Let's connect! Feel free to reach out via my LinkedIn.
   </div>
 </section>
 
+<section id="publications" class="publications-section mt-5">
+  <h2 class="h4 mb-3">Publications</h2>
+
+  <!-- {% include bib_search.liquid %} -->
+
+  <div class="publications">
+    {% bibliography %}
+  </div>
+</section>
+
