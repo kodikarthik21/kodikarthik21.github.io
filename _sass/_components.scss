@@ -594,6 +594,17 @@ ul.task-list input[type="checkbox"] {
     margin-bottom: 1rem;
     text-align: right;
   }
+
+  /* Reduce project card title size specifically for portfolio cards */
+  /* Make selector more specific so vendor rules don't override it.
+     Match project description (.card-text) default size from vendor CSS. */
+  .card .card-body h2.card-title,
+  .card .card-body h3.card-title,
+  .card .card-body .card-title {
+    /* Force-matching description size; use !important to override vendor rules */
+    font-size: 1.3rem !important;
+    line-height: 1.25;
+  }
 }
 
 // Repositories
@@ -693,4 +704,73 @@ ul.task-list input[type="checkbox"] {
 
 .d2h-diff-table {
   position: relative;
+}
+
+.past-projects-list {
+  margin-top: 1rem;
+}
+
+.past-project-entry {
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1rem;
+  background: rgba(255,255,255,0.03);
+}
+
+.past-project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.past-project-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+/* Add this new rule */
+.past-project-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.past-project-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.past-project-advisor {
+  font-size: 0.85rem;
+  color: var(--global-text-color-light, #aaa);
+}
+
+.past-project-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 2px 8px;
+  margin-right: 4px;
+  color: #aaa;
+}
+
+.past-project-date {
+  font-size: 0.85rem;
+  color: var(--global-text-color-light, #aaa);
+  white-space: nowrap;
+}
+
+.past-project-body {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.past-project-body ul {
+  padding-left: 1.2rem;
 }

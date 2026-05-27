@@ -1,80 +1,78 @@
 ---
 layout: page
-title: project 4
-description: another without an image
-img:
-importance: 3
-category: fun
+title: Speed Planning of Autonomous Electric Truck Platoons
+description: A deep learning encoder-decoder model for speed planning of autonomous electric truck platoons.
+img: assets/img/heliyon_bigpicture.png
+importance: 1
+category: recent
+related_publications: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+Final Dual Degree Project, Indian Institute of Technology Madras (May 2022 - May 2023)
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+Published in **Heliyon (Elsevier), 2024** &nbsp;·&nbsp; Co-authors: Rohith G., K. B. Devika, Shankar C. Subramanian &nbsp;·&nbsp; IIT Madras & University of Exeter
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+---
 
-<div class="row">
+
+## Overview
+
+Electric truck platooning reduces aerodynamic drag and extends driving range for long-haul freight — but optimizing platoon speed under real-world constraints (battery SOC, road conditions, vehicle mass, intervehicular spacing) is hard to solve from first principles. This paper presents a sequence-to-sequence encoder-decoder LSTM model that predicts the speed profile an autonomous electric truck platoon should follow to meet a desired state-of-charge (SOC) target while maintaining string stability.
+
+<div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/heliyon_bigpicture.png" title="Overall framework" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+    Proposed encoder-decoder LSTM speed planner integrated with the autonomous electric truck platoon framework.
 </div>
-<div class="row">
+
+---
+
+## Key Contributions
+
+- An autonomous string-stable electric truck platoon simulation framework built in MATLAB Simulink, incorporating full longitudinal vehicle dynamics, tire model, motor model, and battery model.
+- An encoder-decoder LSTM model that takes an instantaneous power consumption profile (derived from a desired SOC profile) as input and outputs the speed profile the platoon should follow.
+- Training on four standard heavy-vehicle highway drive cycles (ETC, Millbrook, HWFET, HHDDT) across varied operating conditions — road friction, vehicle mass, and time headway.
+- A case study demonstrating how predicted drive cycles can inform policy decisions on charging station placement, battery sizing, and route planning for electric truck fleets.
+
+---
+
+## Model Architecture
+
+The model maps a desired energy (SOC) profile to a feasible speed trajectory — analogous to sequence-to-sequence translation in NLP. SOC is converted to instantaneous power consumption before being fed to the encoder, making the input independent across time steps. The decoder then generates the corresponding speed profile.
+
+<div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/heliyon_encdec.png" title="Encoder-decoder architecture" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    Encoder-decoder sequence-to-sequence architecture used for speed planning.
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+---
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+## Training & Results
+
+The model was trained on data generated from the platoon simulation framework using four highway drive cycles. Hyperparameter tuning was performed over LSTM layers, units, learning rate, and batch size. The final model achieved:
+
+- **RMSE: 12.62 km/h** on the high-speed validation window (250–1500 s)
+- **MAPE: 13.25%** on the same window
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/heliyon_drivecycles.png" title="Drive cycles used for training" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/heliyon_comparison.png" title="Model comparison" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+    Left: Highway drive cycles used for training and validation. Right: Comparison of predicted vs. actual speed profiles across model variants.
 </div>
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
 
-{% raw %}
+---
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}

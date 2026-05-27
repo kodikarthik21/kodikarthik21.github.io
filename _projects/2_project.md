@@ -1,81 +1,144 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
-importance: 2
-category: work
-giscus_comments: true
+title: Automated Experimentation Laboratory Robot
+description: An end-to-end automation system with a robotic arm integrated with lab machines to perform experiments autonomously.
+img: assets/img/apex_preview.jpg
+importance: 1
+category: recent
+related_publications: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+MS in Robotic Systems Development — Capstone Project (Dec 2025 → Nov 2026)
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+Teammates: Arnav Kharbanda, Juan Muerto, Farnaz Alam Ahmed
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+Mentor: Dr. Min Xu
 
-<div class="row">
+Project: APEX Labs — Automated Precision EXperimentation Laboratories, an integrated platform that couples a mobile manipulator with networked lab machines for autonomous experiment execution.
+
+---
+
+## The Problem
+
+Scientists lose an estimated 3 months per year to non-core, non-creative tasks. 70% of diagnostic mistakes occur in the pre-analytical phase, costing US labs 180,000 dollars annually. The direct lab automation market is projected to grow from 7.15B to 12.25B by 2033, with $1.6T in indirect potential in material and physical sciences.
+
+---
+
+## The Solution
+
+APEX Labs integrates perception, planning, manipulation, and lightweight lab-device APIs to automate routine wet-lab tasks. The system handles three core capabilities: workflow execution (running pre-programmed protocols without human intervention), material transport (autonomously moving samples between stations including liquid handlers and shakers), and active monitoring (detecting anomalies such as clogged pipettes and spilled liquids in real-time).
+
+---
+
+## Demo
+
+<div class="video-container" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;">
+  <iframe src="https://www.youtube.com/embed/vI8Z9WY06Nc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+
+---
+
+## Key Achievements
+
+- Pick success rate improved from ~65% to ~99% after adding visual servo + force-feedback grasping with retry logic.
+- Perception models achieved 99.5% mAP50 (top camera) and 99.4% mAP50 (gripper camera) with zero false positives.
+- Planning subsystem achieved 100% success rate across all tested configurations.
+- Awarded a $1,000 grant from the Swartz Center to support early prototyping.
+- Selected among the top 20 applicants for the Gebhardt Sandbox Fund for early-stage founders.
+
+---
+
+## Architecture
+
+<div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/apex_functional_arch.png" title="Functional architecture" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">Functional architecture: from user input through perception, planning, manipulation, and lab machine integration to experiment results.</div>
+
+
+
+---
+
+## Subsystems
+
+### Perception
+Two ZED stereo cameras feed YOLO-based detectors. The overhead camera scans the environment and provides 3D positions of lab equipment to the planning module; the wrist camera guides close-range visual servo grasping.
+
+<div class="row mt-2">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/perception_top_camera.png" title="Top camera detection" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/perception_gripper_camera.png" title="Gripper camera detection" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">Left: Top camera detecting a wellplate (99.5% mAP50), and the point cloud of the environment in RViz used for collision-aware planning. Right: Gripper camera centering on target (99.4% mAP50). </div>
+
+### Planning
+A PRM-based planner consumes voxelized point clouds and publishes collision-free trajectories over ROS2. Gripper orientation is constrained to prevent liquid spillage during transport. The system achieved a **100% planning success rate** (target: 95%) across all tested source-destination pairs.
+
+<div class="row mt-2">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/motion_planning.png" title="Voxelized environment in RViz" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">Voxelized environment loaded in RViz for obstacle-aware path generation.</div>
+
+### Manipulation
+A custom two-finger lead-screw gripper with fingertip FSRs uses Image-Based Visual Servoing (IBVS) via a PnP algorithm to center on the wellplate. Force sensor readings provide grasp verification and centering error correction, with automatic retries on failure. Achieved **100% success rate with retries** (target: 75%) across 15 grasps.
+
+<div class="row mt-2">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/apex_gripper.png" title="Custom gripper" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/Mobile_base_in_IsaacSim.png" title="Mobile_base_in_IsaacSim" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
+<div class="caption">Left: Custom gripper with fingertip force sensing in operation, Right: Mobile base in Isaac Sim</div>
+
+
+### User Interface
+A React UI streams live camera feeds and system status, supports natural language experiment input via GPT-5, and provides step-by-step experiment monitoring.
+
+<div class="row mt-2">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/capstone_UI.png" title="User interface" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+<div class="caption">Web UI showing live experiment execution: step tracker, executor status, and multi-camera feeds with real-time YOLO detection overlays.</div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+---
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+## Results
+
+All spring semester performance targets were met or exceeded:
+
+| Subsystem | Target | Achieved |
+|---|---|---|
+| Recognize Lab Equipment | 90% accuracy | 100% (5/5) |
+| Localize Lab Equipment | ≤ 3 cm error | < 1 cm error |
+| Grasp Lab Equipment | 75% success | 100% (6/6) |
+| Plan to Reach Equipment | 95% success | 100% (16/16) |
+| Command Lab Machines | 100% accuracy | 100% (2/2) |
+
+---
+
+## Gallery
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/apex_me_explaining.jpeg" title="Spring validation demo" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/apex_svd.png" title="Team H" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/apex_team.png" title="Team H" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>  
+<div class="caption">Spring Validation Demonstration — with mentor Dr. Min Xu.</div>

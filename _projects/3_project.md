@@ -1,81 +1,92 @@
 ---
 layout: page
-title: project 3 with very long name
-description: a project that redirects to another website
-img: assets/img/7.jpg
-redirect: https://unsplash.com
-importance: 3
-category: work
+title: Semantic Segregation using VLMs and execution using motion planning
+description: Open-vocabulary object sorting with a Vision-Language Model and a Franka robotic arm
+img: assets/img/semantic_seg_cover.jpg
+importance: 1
+category: recent
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+16662 - Robot Autonomy course, Spring 2026, Carnegie Mellon University.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+Teammates: Aman Tambi, Kushal Agarwal, Narayanan Palghat Parameshwaran, Shubh Jain
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+
+This project integrates a Vision-Language Model (VLM) with a Franka Emika Panda arm to perform open-vocabulary semantic sorting — no category-specific training required. The robot picks up an object, shows it to a RealSense camera, queries the VLM with the image and current rack state, and places it in the semantically appropriate slot.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/sem_seg_setup.png" title="Demo setup with Franka arm, two racks, and Intel RealSense" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/sem_seg_pipeline.png" title="System pipeline diagram" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+    Left: Physical setup — Franka arm centered between two three-shelf racks with the Intel RealSense mounted on the right column. Right: The six-stage pipeline from pickup through VLM reasoning to placement.
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+---
+
+## Motivation
+
+Traditional robots struggle to identify and sort novel objects in unstructured environments because they rely on fixed object taxonomies and task-specific training. Using a VLM bridges human-like visual reasoning with precise physical action, enabling intuitive open-vocabulary pick-and-place without retraining for every new category.
+
+---
+
+## System Overview
+
+The pipeline runs as follows: the arm picks up an object and moves to an inspection pose visible to the camera. An RGB image is captured and sent to the VLM alongside a JSON record of the current rack state. The model returns a target slot and a natural-language explanation. The arm then deposits the object and resets for the next cycle.
+
+The rack audit JSON persists across the full session so the VLM can maintain consistent semantic groupings as the rack fills up.
+
+---
+
+## VLM Benchmarking
+
+Three models were evaluated on 10 identical placement trials each:
+
+| Model | Correct Placements | Success Rate |
+|---|---|---|
+| Gemini 2.5 Pro | 9/10 | 90% |
+| Claude 3.5 Sonnet | 8/10 | 80% |
+| Qwen3 VL | 7/10 | 70% |
+
+Gemini 2.5 Pro was selected as the primary model for end-to-end trials.
+
+---
+
+## Results
+
+The system was evaluated across nine objects: a keychain fob, wooden letter blocks, an orange, a plush keychain toy, a travel power adapter, a video game controller, an apple, and a stapler. Eight of nine placements were semantically correct and physically stable.
+
+{% include video.liquid path="assets/video/sem_seg_demo.mp4" controls=true %}
+
+The failure revealed a gap in the rack audit: the JSON records slot occupancy by category but carries no information about remaining physical capacity. Adding a per-slot item count would fix this directly.
+
+---
+
+## Final Rack State
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/sem_seg_final.jpg" title="Final rack configuration after all nine trials" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+    Final rack after nine trials. Distinct semantic clusters: personal accessories and toys (top shelf), food (middle shelf), electronics (bottom left), stationery (top right).
 </div>
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+---
 
-{% raw %}
+## Motion Planning
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+Safe operation in the confined workspace used four layers: a static PRM-based collision model built offline, straight-line joint-space planning at runtime (with PRM fallback on collision detection), trajectory caching to disk, and virtual wall constraints above and in front of the workspace.
 
-{% endraw %}
+---
+
+## Team
+
+**Primary Implementation** — Aman Tambi, Kushal Agarwal, Shubh Jain: motion planning on the physical Franka arm, trajectory caching.
+
+**Framework & Testing** — Narayanan Palghat Parameshwaran, Karthik Srinivasan: VLM benchmarking and integration, prompt engineering, rack audit JSON state machine, object-level testing.
