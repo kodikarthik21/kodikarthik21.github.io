@@ -60,8 +60,9 @@ Gemini 2.5 Pro was selected as the primary model for end-to-end trials.
 
 The system was evaluated across nine objects: a keychain fob, wooden letter blocks, an orange, a plush keychain toy, a travel power adapter, a video game controller, an apple, and a stapler. Eight of nine placements were semantically correct and physically stable.
 
-{% include video.liquid path="assets/video/sem_seg_demo.mp4" controls=true %}
-
+<div class="video-container" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;">
+  <iframe src="https://www.youtube.com/embed/7pE_sq3b1KA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
 The failure revealed a gap in the rack audit: the JSON records slot occupancy by category but carries no information about remaining physical capacity. Adding a per-slot item count would fix this directly.
 
 ---
