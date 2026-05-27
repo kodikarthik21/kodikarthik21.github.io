@@ -11,17 +11,10 @@ ninja.data = [{
     },
   },{id: "nav-projects",
           title: "projects",
-          description: "A growing collection of your cool projects.",
+          description: "These list out the projects I am working/have worked on.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
-          },
-        },{id: "nav-repositories",
-          title: "repositories",
-          description: "Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/repositories/";
           },
         },{id: "nav-cv",
           title: "CV",
@@ -409,49 +402,54 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+          section: "News",},{id: "projects-projects-as-team-captain-raftar-formula-racing",
+          title: 'Projects as Team Captain, Raftar Formula Racing',
+          description: "(Apr 2019 -&gt; Mar 2022) Frame &amp; Composites Engineer → Team Captain. Built and raced formula-style cars at IIT Madras over three years.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/10_project/";
+            },},{id: "projects-physics-guided-human-motion-diffusion",
+          title: 'Physics-guided human motion diffusion',
+          description: "Infusing a reward model at every denoising step to steer the model towards generating more physically plausible trajectories",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
+            },},{id: "projects-automated-experimentation-laboratory-robot",
+          title: 'Automated Experimentation Laboratory Robot',
+          description: "An end-to-end automation system with a robotic arm integrated with lab machines to perform experiments autonomously.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
+            },},{id: "projects-semantic-segregation-using-vlms-and-execution-using-motion-planning",
+          title: 'Semantic Segregation using VLMs and execution using motion planning',
+          description: "Open-vocabulary object sorting with a Vision-Language Model and a Franka robotic arm",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
-            },},{id: "projects-project-4",
-          title: 'project 4',
-          description: "another without an image",
+            },},{id: "projects-speed-planning-of-autonomous-electric-truck-platoons",
+          title: 'Speed Planning of Autonomous Electric Truck Platoons',
+          description: "A deep learning encoder-decoder model for speed planning of autonomous electric truck platoons.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_project/";
-            },},{id: "projects-project-5",
-          title: 'project 5',
-          description: "a project with a background image",
+            },},{id: "projects-transliteration-system-using-deep-learning",
+          title: 'Transliteration System using Deep Learning',
+          description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/5_project/";
-            },},{id: "projects-project-6",
-          title: 'project 6',
-          description: "a project with no image",
+            },},{id: "projects-image-classifier-amp-object-detection",
+          title: 'Image Classifier &amp;amp; Object Detection',
+          description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_project/";
-            },},{id: "projects-project-7",
-          title: 'project 7',
-          description: "with background image",
+            },},{id: "projects-product-review-clustering",
+          title: 'Product review clustering',
+          description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/7_project/";
-            },},{id: "projects-project-8",
-          title: 'project 8',
-          description: "an other project with a background image and giscus comments",
+            },},{id: "projects-credit-risk-prediction-amex",
+          title: 'Credit Risk Prediction (AmEx)',
+          description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/8_project/";
-            },},{id: "projects-project-9",
-          title: 'project 9',
-          description: "another project with an image 🎉",
+            },},{id: "projects-stock-price-prediction",
+          title: 'Stock Price Prediction',
+          description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
             },},{id: "teachings-data-science-fundamentals",
