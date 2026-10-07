@@ -214,7 +214,8 @@ nav_order: 2
 
 <h2 class="bg-h" id="projects"><i class="fa-solid fa-flask"></i> Selected projects</h2>
 
-<div class="projects"><div class="row row-cols-1 row-cols-md-3">
+<div class="projects">
+<div class="row row-cols-1 row-cols-md-3">
   {% assign featured = "2_project,1_project,3_project" | split: "," %}
   {% for id in featured %}
     {% assign path = "_projects/" | append: id | append: ".md" %}
