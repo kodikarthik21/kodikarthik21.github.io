@@ -91,10 +91,10 @@ Two ZED stereo cameras feed YOLO-based detectors. The overhead camera scans the 
 Sampling-based planners (RRTConnect and PRM via OMPL and MoveIt) consume voxelized point clouds from the live ZED feed and publish collision-free trajectories over ROS2. Gripper orientation is constrained throughout every trajectory to prevent liquid spillage, which shrinks the valid configuration space dramatically; reliability came from bounding the planning workspace, path shortening, and a Cartesian planner for the final constrained descent to the grasp. The system achieved a **100% planning success rate** (target: 95%) across all tested source-destination pairs.
 
 <div class="row mt-2">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm-8 mt-3 mt-md-0">
         {% include figure.liquid path="assets/img/motion_planning.png" title="Voxelized environment in RViz" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm-4 mt-3 mt-md-0">
         {% include figure.liquid path="assets/img/apex_voxel_scene.jpg" title="Live voxel map with the robot model" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
