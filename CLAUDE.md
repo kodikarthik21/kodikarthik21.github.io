@@ -38,3 +38,8 @@
 - Background page: Skills boxes compact (align-items start, less padding); Q / KDB+ removed from Skills, ANSYS moved to Design and CAD. Experience shows only Serve; the rest sit in a <details class=past> 'Click to view past experiences'.
 - Project page titles match the resume: Physics-Aware Reward Guidance for Text-to-Motion Generation, Mobile Manipulator for Laboratory Automation, Open-Vocabulary Object Sorting with a VLM, AI-Driven Truck Platoon Framework.
 - Project titles live only in each _projects/*.md front matter; Background, Projects and the home Selected work all read project.title / pj.title. Change a title there and nowhere else.
+
+- Background page Selected projects grid is wrapped in `<div class="projects">` so the cards use the same title size (1.3rem, from `_sass/_components.scss` `.projects`) as the Projects tab.
+- CV tab hidden from the nav (`nav` and `nav_order` commented out in `_pages/cv.md`); /cv/ still resolves by URL. Uncomment both to restore.
+- Search box (ctrl k) hidden: `search_enabled: false` in `_config.yml` (needs container restart). Set true to restore.
+- Background page Selected projects cards are wrapped in <div class=projects> so card titles use the same 1.3rem size and no underline as the Projects page.
