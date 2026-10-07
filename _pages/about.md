@@ -4,232 +4,71 @@ title: about
 permalink: /
 subtitle: 
 
-toc:
-  sidebar: right
-
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
-  more_info: 
+  more_info: '<div class="edu"><div class="edu-h">Education</div><div class="edu-r"><img src="/assets/img/cmu_logo.png" alt="CMU"><div><b>MS in Robotic Systems Development</b><span>Carnegie Mellon University</span><em>2025 - 2027</em></div></div><div class="edu-r"><img src="/assets/img/iitm_logo.jpg" alt="IIT Madras"><div><b>B.Tech Mechanical Engineering + M.Tech Data Science</b><span>IIT Madras</span><em>2018 - 2023</em></div></div><div class="edu-h" style="margin-top:1.2rem">Experience</div><div class="edu-r"><img src="/assets/img/serve_logo.png" alt="Serve Robotics"><div><b>Machine Learning Intern, Autonomy</b><span>Serve Robotics</span><em>May 2026 - Aug 2026</em></div></div><div class="edu-r"><img src="/assets/img/hsbc_logo.png" alt="HSBC"><div><b>Senior Associate, Quantitative Modeling</b><span>HSBC</span><em>2023 - 2025</em></div></div></div>'
 
 # selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I’m a Robotics Master’s student at Carnegie Mellon University, working on autonomous systems that can handle the unpredictability of the real world. I’m especially interested in how machine learning can be combined with physical systems to build robots that are both intelligent and reliable in unstructured environments.
+<style>
+  .home-h { font-size: 1.2rem; font-weight: 700; margin: 2.2rem 0 .8rem; padding-bottom: .35rem; border-bottom: 1px solid var(--global-divider-color); }
+  .work { display: flex; gap: 1.1rem; align-items: flex-start; padding: .9rem 0; }
+  .work + .work { border-top: 1px solid var(--global-divider-color); }
+  .work img { flex: none; width: 170px; height: 110px; object-fit: cover; border-radius: 8px; border: 1px solid var(--global-divider-color); }
+  .work b { display: block; font-size: 1.02rem; line-height: 1.3; margin-bottom: .2rem; }
+  .work b a { color: var(--global-text-color); }
+  .work b a:hover { color: var(--global-theme-color); }
+  .glance { display: grid; gap: .7rem; margin: 1.4rem 0 0; padding: 0; }
+  .glance > div { display: grid; grid-template-columns: 6.5rem 1fr; gap: .75rem; align-items: baseline; font-size: .93rem; line-height: 1.5; }
+  .glance > div > b { font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--global-theme-color); }
+  .glance .chips { display: flex; flex-wrap: wrap; gap: .3rem; }
+  .glance .chips span { font-size: .72rem; font-weight: 600; padding: .12rem .55rem; border-radius: 999px; background: color-mix(in srgb, var(--global-theme-color) 12%, transparent); color: var(--global-theme-color); }
+  @media (max-width: 576px) { .glance > div { grid-template-columns: 1fr; gap: .2rem; } }
+  .work p { margin: 0; font-size: .93rem; line-height: 1.5; color: var(--global-text-color-light); }
+  @media (max-width: 576px) { .work { flex-direction: column; } .work img { width: 100%; height: auto; aspect-ratio: 16/9; } }
+  .edu, .edu * { font-family: "Roboto", -apple-system, "Segoe UI", sans-serif; }
+  .edu { text-align: left; margin-top: 1rem; }
+  .edu-h { font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; color: var(--global-theme-color); margin-bottom: .5rem; }
+  .edu-r { display: flex; gap: .7rem; align-items: center; padding: .6rem 0; border-top: 1px solid var(--global-divider-color); }
+  .edu-r img { flex: none; width: 42px; height: 42px; object-fit: contain; border-radius: 6px; }
+  .edu-r div { line-height: 1.3; }
+  .edu-r b { display: block; font-size: .88rem; color: var(--global-text-color); }
+  .edu-r span { display: block; font-size: .82rem; color: var(--global-text-color-light); }
+  .edu-r em { display: block; font-size: .78rem; font-style: normal; color: var(--global-text-color-light); }
+  .publications h2.bibliography { display: none; }
+  .publications ol.bibliography { margin-top: 0; }
+</style>
 
-Right now, I’m interning at Serve Robotics, where I work on world models for predicting pedestrian behavior and improving sidewalk navigation for delivery robots. In parallel, I’m building an end-to-end autonomous laboratory experimentation robot as part of my CMU capstone — a system that brings perception, mobile manipulation, and planning together to automate wet-lab workflows, enabling closed-loop experimental execution with minimal human intervention  .
+I'm a Robotics Master's student at Carnegie Mellon University (MRSD, class of 2027). My coursework spans Generative AI, Robot Learning, Robot Autonomy and Learning for 3D Vision.
 
-Outside work, I’m a foodie who enjoys exploring different cuisines and always up for trying something new! Feel free to send restaurant recommendations if we are in the same city :). I also enjoy playing badminton, tennis, and cricket recreationally, though I’m not formally trained in any of them.
+My interests lie in teaching robots to act intelligently with machine learning (RL, imitation learning), spanning **behavior prediction, manipulation, and navigation (driving)**.
 
-Let's connect! Feel free to reach out via my LinkedIn.
+I interned at Serve Robotics in Summer 2026, where I trained a **diffusion model** to predict pedestrian behavior and developed a framework for training an **RL** navigation policy in simulation (**PPO**, Unreal Engine) for moving around dense pedestrians. I am also working on the autonomy stack of a <a href="/projects/2_project/">mobile manipulator for automating lab experiments</a> as a part of my capstone project at CMU. I'm implementing an **Action Chunking Transformer** using **imitation learning** to place wellplates, with **Informed RRT\*** motion planning and **visual servoing** for grasping.
 
-<div class="about-sections mb-5">
-  <section class="about-section mb-5">
-    <div class="d-flex align-items-center justify-content-between">
-      <h2 class="h4 mb-0">Education</h2>
-    </div>
-    <hr class="my-2" />
+I am looking for **full-time new grad roles starting May 2027**. Please feel free to reach out if you have any relevant openings!
 
-    <div class="about-details mb-3">
-      <div class="about-summary custom-logo-entry">
-        <div>
-          <div style="flex-shrink: 0; width: 75px; text-align: center;">
-            <img src="/assets/img/cmu_logo.png" alt="Carnegie Mellon University" style="max-width: 100%; height: auto; border-radius: 6px;">
-          </div>
-          <div>
-            <h4 class="h6 mb-1">Carnegie Mellon University</h4>
-            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">MS in Robotic Systems Development</p>
-          </div>
-          <div class="text-end" style="flex-shrink: 0;">
-            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">2025 – Present</p>
-          </div>
-        </div>
-      </div>
-      <div class="about-details-panel mt-3">
-        <ul class="mb-0 ps-3">
-        <li>CGPA: 4.08/4. Relevant Coursework: Generative AI, Computer Vision, Robot Autonomy, Manipulation, Estimation and Control</li>
-        <li>Capstone Project: End-to-end autonomous laboratory experimentation system using a robotic arm and integrated lab equipment. Focused on perception and planning modules; Mentor: Prof. Min Xu</li>
-        </ul>
-      </div>
-    </div>
+Outside work, I'm a foodie who enjoys exploring different cuisines and always up for trying something new! Feel free to send restaurant recommendations if we are in the same city :). I also enjoy playing badminton, tennis, and cricket recreationally, though I'm not formally trained in any of them. Let's connect on <a href="https://linkedin.com/in/srini-karthik">LinkedIn</a>, or see my <a href="/background/">background</a>.
 
-    <div class="about-details">
-      <div class="about-summary custom-logo-entry">
-        <div>
-          <div style="flex-shrink: 0; width: 75px; text-align: center;">
-            <img src="/assets/img/iitm_logo.jpg" alt="Indian Institute of Technology Madras" style="max-width: 100%; height: auto; border-radius: 6px;">
-          </div>
-          <div>
-            <h4 class="h6 mb-1">Indian Institute of Technology Madras</h4>
-            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">B.Tech Mechanical Engineering + <br>M.Tech Data Science</p>
-          </div>
-          <div class="text-end" style="flex-shrink: 0;">
-            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">2018 – 2023</p>
-          </div>
-        </div>
-      </div>
-      <div class="about-details-panel mt-3">
-        <ul class="mb-0 ps-3">
-          <li>CGPA: 9.36/10 (3.959/4). Relevant coursework: Deep Learning, Data Analytics, Modern Control Theory, Non-Linear Systems Analysis, Process Optimization</li>
-          <li>Final project: A data driven approach for speed planning truck platoons, Prof. Shankar Ram C S</li>
-          <li>Co-curricular activities: Formula Student (Team Captain), led the transition from combustion to an electric racecar, won the first design competition.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="about-section mb-5">
-    <div class="d-flex align-items-center justify-content-between">
-      <h2 class="h4 mb-0">Work Experience</h2>
-    </div>
-    <hr class="my-2" />
-
-      <div class="about-details">
-      <div class="about-summary custom-logo-entry">
-        <div>
-          <div style="flex-shrink: 0; width: 75px; text-align: center;">
-            <img src="/assets/img/hsbc_logo.png" alt="HSBC" style="max-width: 100%; height: auto; border-radius: 6px;">
-          </div>
-          <div>
-            <h4 class="h6 mb-1">HSBC Global Markets</h4>
-            <p class="mb-0 text-secondary" style="font-size: 0.95rem; font-weight: 600;">Equities Execution Services</p>
-          </div>
-          <div class="text-end" style="flex-shrink: 0;">
-            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">Bengaluru, India</p>
-            <p class="mb-0" style="font-size: 0.9rem; color: #adb5bd;">Jul 2023 – Jul 2025</p>
-          </div>
-        </div>
-      </div>
-    <div class="about-details-panel mt-3">
-      
-      <div class="mb-3" style="padding-right: 1.5rem;">
-        <div class="d-flex align-items-center justify-content-between" style="width: 100%;">
-          <h5 class="h6 mb-1">Senior Associate, Quantitative Modeling</h5>
-          <p class="mb-0" style="font-size: 0.9rem; color: #adb5bd;">Mar 2025 – Jul 2025</p>
-        </div>
-        <ul class="mb-0 ps-3">
-          <li>Estimated hidden liquidity in cash equity markets and improved an execution algorithm to capture 25% more liquidity.</li>
-          <li>Investigated adding aggressiveness of an order as a metric to improve the existing Almgren Chriss market impact model.</li>
-        </ul>
-      </div>
-      
-      <div style="padding-right: 1.5rem;">
-        <div class="d-flex align-items-center justify-content-between" style="width: 100%;">
-          <h5 class="h6 mb-1">Associate, Quantitative Modeling</h5>
-          <p class="mb-0" style="font-size: 0.9rem; color: #adb5bd;">Jul 2023 – Mar 2025</p>
-        </div>
-        <ul class="mb-0 ps-3">
-          <li>Awarded as the Rising Star of Q2 (2024) in the Markets and Securities Services division for exemplary performance.</li>
-          <li>Introduced the equities execution platform for an emerging market based on quantitative research on market behaviour.</li>
-          <li>Built a tool for post trade analysis of orders and to flag non-optimally executed orders to enable better troubleshooting.</li>
-        </ul>
-      </div>
-
-    </div>
-    </div>
-  </section>
-
-  <section class="about-section mb-5">
-    <div class="d-flex align-items-center justify-content-between">
-      <h2 class="h4 mb-0">Internships</h2>
-    </div>
-    <hr class="my-2" />
-
-    <div class="about-details mb-3">
-      <div class="about-summary custom-logo-entry">
-        <div>
-          <div style="flex-shrink: 0; width: 75px; text-align: center;">
-            <img src="/assets/img/mathlogic_logo.jpg" alt="Mathlogic Consulting Services" style="max-width: 100%; height: auto; border-radius: 6px;">
-          </div>
-          <div>
-            <h4 class="h6 mb-1">Mathlogic Consulting Services</h4>
-            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">Deep Learning Internship</p>
-          </div>
-          <div class="text-end" style="flex-shrink: 0;">
-            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">Gurugram, India</p>
-            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">May 2021 – Jul 2021</p>
-          </div>
-        </div>
-      </div>
-      <div class="about-details-panel mt-3">
-        <ul class="mb-0 ps-3">
-          <li>Proposed a model for a physician‑focused clinical documentation improvement firm to predict the outcome of insurance claims.</li>
-          <li>Implemented Transformer‑based (SAINT) and Factorization Machines‑based (DeepFM) neural networks for tabular data.</li>
-          <li>Achieved 7.5% and 10% improvement in ROC‑AUC and F1 score upon the incumbent XGBoost models.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="about-details mb-3">
-      <div class="about-summary custom-logo-entry">
-        <div>
-          <div style="flex-shrink: 0; width: 75px; text-align: center;">
-            <img src="/assets/img/tuberlin_logo.png" alt="TU Berlin" style="max-width: 100%; height: auto; border-radius: 6px;">
-          </div>
-          <div>
-            <h4 class="h6 mb-1">Technische Universitat Berlin</h4>
-            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">DAAD-WISE internship, Control Systems Group</p>
-          </div>
-          <div class="text-end" style="flex-shrink: 0;">
-            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">Berlin, Germany</p>
-            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">May 2022 – Jul 2022</p>
-          </div>
-        </div>
-      </div>
-      <div class="about-details-panel mt-3">
-        <ul class="mb-0 ps-3">
-          <li>Developed an optimized multi‑agent cooperation algorithm using Iterative Learning Control with Python for a system of robots in an environment to jointly learn and perform a maneuver. Simulations tested using Two‑Wheel‑Inverted‑Pendulum‑Robots (TWIPR) performing a limbo under a bar.</li>
-          <li>Experimented on weights for different learners in the system and achieved 35% performance improvement over the existing learning algorithm.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="about-details mb-3">
-      <div class="about-summary custom-logo-entry">
-        <div>
-          <div style="flex-shrink: 0; width: 75px; text-align: center;">
-            <img src="/assets/img/osu_logo.jpg" alt="Ohio State University" style="max-width: 100%; height: auto; border-radius: 6px;">
-          </div>
-          <div>
-            <h4 class="h6 mb-1">Ohio State University</h4>
-            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">Research Internship, Movement Lab</p>
-          </div>
-          <div class="text-end" style="flex-shrink: 0;">
-            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">Ohio State University</p>
-            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">Dec 2021 – Jan 2022</p>
-          </div>
-        </div>
-      </div>
-      <div class="about-details-panel mt-3">
-        <ul class="mb-0 ps-3">
-          <li>Modeled the kinematics and multi‑body dynamics of ’dice‑stacking’ by deriving first‑principles equations (Dynamic Manipulation)</li>
-          <li>Visualized the sequences of dice‑stacking by a hybrid simulation using MATLAB, with the derived motion and force equations.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+<h2 class="home-h">Selected work</h2>
+<div class="work">
+  <img src="/assets/img/apex_robot_opentrons.jpg" alt="APEX">
+  <div><b><a href="/projects/2_project/">APEX: an autonomous laboratory robot</a></b><p>A mobile manipulator that runs wet-lab protocols on its own. I built the perception models, motion planner, and gripper.</p>{% assign pj = site.projects | where_exp: "x", "x.path contains '/2_project.md'" | first %}{% include chips.liquid methods=pj.methods tools=pj.tools %}</div>
+</div>
+<div class="work">
+  <img src="/assets/img/PRG_presentation.jpg" alt="PRG poster">
+  <div><b><a href="/projects/1_project/">Physics-guided human motion diffusion</a></b><p>A reward model steers every denoising step toward physically plausible motion. 3rd of 20 teams.</p>{% assign pj = site.projects | where_exp: "x", "x.path contains '/1_project.md'" | first %}{% include chips.liquid methods=pj.methods tools=pj.tools %}</div>
+</div>
+<div class="work">
+  <img src="/assets/img/semantic_seg_cover.jpg" alt="VLM sorting">
+  <div><b><a href="/projects/3_project/">Open-vocabulary object sorting with a VLM</a></b><p>A Franka arm sorts objects it has never seen using a vision-language model and PRM motion planning.</p>{% assign pj = site.projects | where_exp: "x", "x.path contains '/3_project.md'" | first %}{% include chips.liquid methods=pj.methods tools=pj.tools %}</div>
 </div>
 
-<section class="about-skills mt-4">
-  <h2 class="h4 mb-2">Skills</h2>
-
-  <div class="skill-list">
-    <p style="font-size:0.95rem; margin-bottom:0.5rem;"><strong>Programming & Data:</strong> Python, C++, SQL, Q / KDB+</p>
-    <p style="font-size:0.95rem; margin-bottom:0.5rem;"><strong>Machine Learning & Frameworks:</strong> PyTorch, Keras, TensorFlow</p>
-    <p style="font-size:0.95rem; margin-bottom:0.5rem;"><strong>Robotics & Simulation:</strong> MATLAB, ROS2, MoveIt, MuJoCo, IsaacSim, Simulink, ANSYS</p>
-    <p style="font-size:0.95rem; margin-bottom:0.5rem;"><strong>Design & CAD:</strong> SolidWorks, Fusion 360, CATIA</p>
-  </div>
-</section>
-
-<section id="publications" class="publications-section mt-5">
-  <h2 class="h4 mb-3">Publications</h2>
-
-  <!-- {% include bib_search.liquid %} -->
-
-  <div class="publications">
-    {% bibliography %}
-  </div>
-</section>
+<h2 class="home-h">Publications</h2>
+<div class="publications">
+  {% bibliography %}
+</div>
 

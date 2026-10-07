@@ -4,7 +4,6 @@ title: Credit Risk Prediction (AmEx)
 date_range: Jul. 2021 – Nov. 2021
 advisor: Prof. Nandan S, DoMS, IIT Madras
 tags: [Machine and Deep Learning]
-github: true
 importance: 4
 category: past
 ---

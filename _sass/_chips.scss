@@ -1,0 +1,5 @@
+// Single source of truth for chips. Markup: _includes/chips.liquid. One flowing set, no headings: tags filled, tools outlined.
+.chips { display: flex; flex-wrap: wrap; gap: .3rem; align-items: center; margin-top: .5rem; }
+.chips span { font-size: .7rem; font-weight: 600; padding: .12rem .55rem; border-radius: 999px; border: 1px solid transparent; background: color-mix(in srgb, var(--global-theme-color) 14%, transparent); color: var(--global-theme-color); }
+.chips span.tool { background: transparent; border-color: color-mix(in srgb, var(--global-theme-color) 45%, transparent); }
+.chips.center { justify-content: center; margin: 0 auto 1.1rem; }

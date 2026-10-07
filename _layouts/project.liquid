@@ -1,0 +1,126 @@
+---
+layout: default
+---
+<style>
+  .pj {
+    --pj-bg: #ffffff; --pj-surface: #f6f7f9; --pj-surface-2: #eef0f4; --pj-text: #1b1f27; --pj-muted: #5d6675;
+    --pj-border: #e2e5ec; --pj-accent: #b4232a; --pj-accent-soft: rgba(180, 35, 42, 0.09);
+    --pj-shadow: 0 1px 2px rgba(20,24,33,.05), 0 8px 24px rgba(20,24,33,.06);
+    color: var(--pj-text);
+  }
+  html[data-theme="dark"] .pj {
+    --pj-bg: #0f1218; --pj-surface: #171b23; --pj-surface-2: #1f2430; --pj-text: #e8ebf1; --pj-muted: #9aa3b2;
+    --pj-border: #2a303c; --pj-accent: #ff6b6f; --pj-accent-soft: rgba(255, 107, 111, 0.12);
+    --pj-shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+  }
+  .pj { max-width: 860px; margin: 0 auto; padding-bottom: 4rem; }
+  .pj-nav { position: sticky; top: 56px; z-index: 20; display: flex; gap: .25rem; overflow-x: auto; padding: .5rem .25rem; margin: 0 -.25rem 1.5rem;
+    background: color-mix(in srgb, var(--pj-bg) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--pj-border); scrollbar-width: none; }
+  .pj-nav::-webkit-scrollbar { display: none; }
+  .pj-nav a { flex: none; padding: .3rem .7rem; border-radius: 999px; font-size: .82rem; color: var(--pj-muted); text-decoration: none; white-space: nowrap; }
+  .pj-nav a:hover { color: var(--pj-text); background: var(--pj-surface-2); }
+  .pj-nav a.active { color: var(--pj-accent); background: var(--pj-accent-soft); font-weight: 600; }
+  .pj-hero { text-align: center; padding: 1.5rem 0 1.25rem; }
+  .pj-eyebrow { display: inline-block; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; color: var(--pj-accent);
+    background: var(--pj-accent-soft); padding: .3rem .75rem; border-radius: 999px; margin-bottom: 1rem; }
+  .pj-title { font-size: clamp(1.9rem, 4.6vw, 2.9rem); line-height: 1.15; font-weight: 800; letter-spacing: -.02em; margin: 0 auto .9rem; color: var(--pj-text); }
+  .pj-people { display: grid; gap: .35rem; justify-items: center; margin: 0 auto 1.1rem; font-size: .95rem; color: var(--pj-muted); }
+  .pj-people a, .pj-people span:not(.pj-plabel) { color: var(--pj-text); font-weight: 600; }
+  .pj-people a { text-decoration: none; border-bottom: 1px dotted var(--pj-accent); }
+  .pj-people a:hover { color: var(--pj-accent); }
+  .pj-people i { margin: 0 .55rem; font-style: normal; color: var(--pj-border); }
+  .pj-people em { margin-left: .4rem; font-size: .85rem; }
+  .pj-plabel { font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; color: var(--pj-accent); margin-right: .7rem; }
+  .pj-ctx { font-size: .85rem; }
+  .pj-tagline { font-size: 1.1rem; line-height: 1.55; color: var(--pj-muted); max-width: 40em; margin: 0 auto 1.25rem; }
+  .pj-actions { display: flex; gap: .6rem; justify-content: center; flex-wrap: wrap; }
+  .pj-btn { display: inline-flex; align-items: center; gap: .4rem; padding: .5rem 1rem; border-radius: 10px; font-size: .88rem; font-weight: 600; text-decoration: none;
+    border: 1px solid var(--pj-border); background: var(--pj-surface); color: var(--pj-text); transition: transform .12s, border-color .12s; }
+  .pj-btn:hover { transform: translateY(-1px); border-color: var(--pj-accent); color: var(--pj-text); text-decoration: none; }
+  .pj-btn.primary { background: var(--pj-accent); border-color: var(--pj-accent); color: #fff; }
+  .pj-btn.primary:hover { color: #fff; }
+  .pj-cover { margin: 1.75rem 0 0; border-radius: 16px; overflow: hidden; border: 1px solid var(--pj-border); box-shadow: var(--pj-shadow); background: var(--pj-surface); }
+  .pj-cover img { width: 100%; display: block; }
+  .pj-body { counter-reset: pjsec; font-size: 1.02rem; line-height: 1.72; }
+  .pj-body > p:first-of-type, .pj-body > p:nth-of-type(2), .pj-body > p:nth-of-type(3) { color: var(--pj-muted); }
+  .pj-body > p:first-of-type { margin-top: 2rem; }
+  .pj-body hr { border: 0; margin: 0; height: 0; }
+  .pj-body h2 { counter-increment: pjsec; margin: 3.25rem 0 1rem; padding: 0; border: 0; font-size: 1.65rem; font-weight: 800; letter-spacing: -.015em; color: var(--pj-text); scroll-margin-top: 120px; }
+  .pj-body h2::before { content: counter(pjsec); display: inline-grid; place-items: center; width: 1.7rem; height: 1.7rem; margin-right: .6rem; border-radius: 8px;
+    font-size: .85rem; font-weight: 800; color: #fff; background: var(--pj-accent); vertical-align: .18em; }
+  .pj-body h3 { margin: 2rem 0 .6rem; font-size: 1.15rem; font-weight: 700; color: var(--pj-text); padding-left: .75rem; border-left: 3px solid var(--pj-accent); }
+  .pj-body a { color: var(--pj-accent); }
+  .pj-body strong { color: var(--pj-text); }
+  .pj-body ul { padding-left: 1.2rem; }
+  .pj-body li { margin-bottom: .45rem; }
+  .pj-body li::marker { color: var(--pj-accent); }
+  .pj-body img { border: 1px solid var(--pj-border); box-shadow: var(--pj-shadow); border-radius: 12px; }
+  .pj-body .caption { margin-top: .6rem; padding: .6rem .9rem; border-left: 3px solid var(--pj-border); color: var(--pj-muted); font-size: .88rem; line-height: 1.55; background: var(--pj-surface); border-radius: 0 8px 8px 0; }
+  .pj-body figcaption { color: var(--pj-muted); font-size: .85rem; margin-top: .4rem; }
+  .pj-body table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 1rem 0; font-size: .93rem; border: 1px solid var(--pj-border); border-radius: 12px; overflow: hidden; box-shadow: var(--pj-shadow); }
+  .pj-body th { background: var(--pj-surface-2); color: var(--pj-text); text-align: left; padding: .65rem .9rem; font-size: .8rem; letter-spacing: .05em; text-transform: uppercase; }
+  .pj-body td { padding: .65rem .9rem; border-top: 1px solid var(--pj-border); background: var(--pj-surface); color: var(--pj-text); }
+  .pj-body blockquote { margin: 1.25rem 0; padding: .9rem 1.1rem; border-left: 4px solid var(--pj-accent); background: var(--pj-accent-soft); border-radius: 0 10px 10px 0; color: var(--pj-text); }
+  .pj-body .video-container { border-radius: 14px; overflow: hidden; border: 1px solid var(--pj-border); box-shadow: var(--pj-shadow); }
+  .pj-body pre { background: var(--pj-surface); border: 1px solid var(--pj-border); border-radius: 10px; padding: 1rem; }
+  .pj-foot { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--pj-border); text-align: center; }
+  @media (max-width: 576px) { .pj-body h2 { font-size: 1.4rem; } .pj-nav { top: 48px; } }
+</style>
+
+<div class="pj">
+  <nav class="pj-nav" id="pj-nav" aria-label="Sections"></nav>
+
+  <header class="pj-hero">
+    <span class="pj-eyebrow">{% if page.category == 'recent' %}Project{% else %}{{ page.category }}{% endif %}</span>
+    <h1 class="pj-title">{{ page.title }}</h1>
+    {% if page.team or page.advisors or page.context %}
+    <div class="pj-people">
+      {% if page.team %}<div><span class="pj-plabel">Team</span>{% for p in page.team %}{% if p.url %}<a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.name }}</a>{% else %}<span>{{ p.name }}</span>{% endif %}{% unless forloop.last %}<i>·</i>{% endunless %}{% endfor %}</div>{% endif %}
+      {% if page.advisors %}<div><span class="pj-plabel">{{ page.advisor_label | default: "Advisor" }}</span>{% for p in page.advisors %}{% if p.url %}<a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.name }}</a>{% else %}<span>{{ p.name }}</span>{% endif %}{% if p.role %}<em>{{ p.role }}</em>{% endif %}{% unless forloop.last %}<i>·</i>{% endunless %}{% endfor %}</div>{% endif %}
+      {% if page.context %}<div class="pj-ctx">{{ page.context }}</div>{% endif %}
+    </div>
+    {% endif %}
+    {% include chips.liquid methods=page.methods tools=page.tools class="center" %}
+    <p class="pj-tagline">{{ page.description }}</p>
+    <div class="pj-actions">
+      <a class="pj-btn primary" href="{{ '/projects/' | relative_url }}"><i class="fa-solid fa-arrow-left"></i> All projects</a>
+      {% if page.github %}<a class="pj-btn" href="{{ page.github }}" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>{% endif %}
+    </div>
+    {% if page.img %}
+    <div class="pj-cover"><img src="{{ page.img | relative_url }}" alt="{{ page.title }}"></div>
+    {% endif %}
+  </header>
+
+  <article class="pj-body" id="pj-body">
+    {{ content }}
+  </article>
+
+  <div class="pj-foot">
+    <a class="pj-btn" href="{{ '/projects/' | relative_url }}"><i class="fa-solid fa-arrow-left"></i> Back to all projects</a>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var body = document.getElementById('pj-body');
+    var nav = document.getElementById('pj-nav');
+    if (!body || !nav) return;
+    var hs = body.querySelectorAll('h2[id]');
+    if (hs.length < 2) { nav.style.display = 'none'; return; }
+    var links = {};
+    hs.forEach(function (h) {
+      var a = document.createElement('a');
+      a.href = '#' + h.id; a.textContent = h.textContent;
+      nav.appendChild(a); links[h.id] = a;
+    });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          Object.keys(links).forEach(function (k) { links[k].classList.remove('active'); });
+          links[e.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-120px 0px -70% 0px' });
+    hs.forEach(function (h) { io.observe(h); });
+  })();
+</script>

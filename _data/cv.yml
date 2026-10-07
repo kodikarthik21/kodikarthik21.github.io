@@ -1,10 +1,11 @@
 cv:
   name: Karthik Srinivasan
-  label: MS Student in Robotic Systems Development
+  label: MS Student in Robotic Systems Development, Carnegie Mellon University
   email: ksriniv2@andrew.cmu.edu
   location: Pittsburgh, PA, USA
+  website: https://kodikarthik21.github.io
   image: ""
-  summary: A student focused on AI and Robotics with a foundation in Mechanical Engineering and interdisciplinary Data Science.
+  summary: Robotics graduate student working on machine learning for autonomy. Diffusion models for behavior prediction and motion generation, reinforcement learning for navigation, and vision-language models for robot task reasoning. Currently a Machine Learning Intern at Serve Robotics.
 
   social_networks:
     - network: GitHub
@@ -15,38 +16,115 @@ cv:
       username: ksriniv2@andrew.cmu.edu
 
   sections:
+    Experience:
+      - company: Serve Robotics
+        position: Machine Learning Intern, Autonomy
+        location: San Carlos, CA, USA
+        start_date: "2026-05"
+        end_date: ""
+        highlights:
+          - Built a pedestrian behavior prediction model using a diffusion framework (NVIDIA TRACE), trained on 40+ hours of real-world sidewalk deployment data to forecast pedestrian trajectories and dynamic obstacle interactions.
+          - Training an end-to-end reinforcement learning navigation policy in simulation with a custom reward model, enabling socially aware maneuvers such as yielding on narrow sidewalks.
+
+      - company: HSBC Global Markets
+        position: Senior Associate, Quantitative Modeling (Equities Execution)
+        location: Bengaluru, India
+        start_date: "2023-07"
+        end_date: "2025-07"
+        highlights:
+          - Improved an in-house execution algorithm by inferring hidden liquidity via heuristic-guided regression on large, noisy market datasets, capturing 25% additional executable volume without market impact.
+          - Enabled electronic execution in an emerging market by modeling trade counts from non-continuous market data feeds; built a post-trade analysis tool that flags non-optimally executed orders.
+          - Awarded Rising Star of Q2 2024 in the Markets and Securities Services division; promoted to Senior Associate in 2025.
+
+      - company: Mathlogic Consulting
+        position: Deep Learning Intern
+        location: Gurugram, India
+        start_date: "2022-05"
+        end_date: "2022-07"
+        highlights:
+          - Pre-trained and fine-tuned a Transformer with self-attention and inter-sample attention for insurance claim approval prediction on an imbalanced tabular dataset, improving ROC-AUC by 7.5% and F1 by 10% over incumbent XGBoost models.
+
+      - company: TU Berlin, Control Systems Group
+        position: DAAD-WISE Research Intern
+        location: Berlin, Germany
+        start_date: "2021-06"
+        end_date: "2021-08"
+        highlights:
+          - Developed a multi-agent Iterative Learning Controller where two-wheel inverted pendulum robots jointly learn a limbo maneuver; achieved a 35% performance gain by weighting each robot's contribution by inverse error.
+
+      - company: Ohio State University, Movement Lab
+        position: Research Intern
+        location: Remote
+        start_date: "2021-12"
+        end_date: "2022-01"
+        highlights:
+          - Modeled the kinematics and multi-body dynamics of dice stacking from first principles and visualized the maneuver with a hybrid MATLAB simulation.
+
     Education:
       - institution: Carnegie Mellon University
         location: Pittsburgh, PA, USA
-        url: https://www.cmu.edu/
-        area: Robotic Systems Development
+        url: https://www.ri.cmu.edu/education/academic-programs/master-of-science-robotic-systems-development/
+        area: Robotic Systems Development (MRSD)
         studyType: MS
-        start_date: 2025
-        end_date: 2027
-        score: ""
+        start_date: "2025"
+        end_date: "2027"
+        score: "4.08/4.0"
         highlights:
-          - Focused on AI, robotics, and systems integration.
+          - "Coursework: Generative AI, Robot Autonomy, Computer Vision, Robot Mobility, Manipulation, Estimation and Control."
+          - "APEX, an autonomous laboratory experimentation robot built as my capstone project (perception and planning lead). Mentor: Prof. Min Xu."
+          - "Teaching assistant: Fundamentals of Control, Fundamentals of Robot Control, Robot Kinematics and Dynamics."
 
       - institution: Indian Institute of Technology Madras
         location: Chennai, India
         url: https://www.iitm.ac.in/
-        area: Mechanical Engineering + Interdisciplinary Data Science
-        studyType: BTech + MTech
-        start_date: 2018
-        end_date: 2023
-        score: ""
+        area: Mechanical Engineering (BTech) + Data Science (MTech)
+        studyType: BTech + MTech (Dual Degree)
+        start_date: "2018"
+        end_date: "2023"
+        score: "9.36/10"
         highlights:
-          - Completed a dual degree with emphasis on machine learning, robotics, and data-driven systems.
+          - "Coursework: Deep Learning, Modern Control Theory, Nonlinear Systems Analysis, Robotics, Probability and Statistics."
+          - "Thesis: a deep learning based speed planning framework for autonomous electric truck platoons (published in Heliyon, 2024)."
+          - "Team Captain of Raftar Formula Racing: led 50+ members through the team's combustion-to-electric transition and won the Formula Bharat 2021-22 championship."
+
+    Publications:
+      - title: A deep learning based encoder-decoder model for speed planning of autonomous electric truck platoons
+        publisher: Heliyon (Elsevier), vol. 10, e31836
+        date: "2024"
+        url: https://doi.org/10.1016/j.heliyon.2024.e31836
+        summary: Karthik S., Rohith G., Devika K. B., Subramanian S. C.
+
+    Awards:
+      - title: Gebhardt Sandbox Fund
+        date: "2026"
+        awarder: Swartz Center for Entrepreneurship, CMU
+        summary: Selected among the top 20 teams for the $1,000 early-stage founder grant for APEX Labs.
+      - title: Rising Star, Q2 2024
+        date: "2024"
+        awarder: HSBC Markets and Securities Services
+        summary: Division-wide award for exemplary performance.
+      - title: Formula Bharat 2021-22 Overall Championship
+        date: "2022"
+        awarder: Formula Bharat
+        summary: Led Raftar Formula Racing to its first championship with a fully electric racecar as Team Captain.
+      - title: DAAD-WISE Scholarship
+        date: "2021"
+        awarder: German Academic Exchange Service (DAAD)
+        summary: Competitive scholarship for research internships in Germany.
 
     Skills:
-      - name: Robotics
+      - name: Programming
+        level: Advanced
+        icon: fa-solid fa-code
+        keywords: "Python (primary), C++ (beginner), SQL, Q/KDB+"
+      - name: Machine Learning
+        level: Advanced
+        icon: fa-solid fa-brain
+        keywords: "PyTorch, TensorFlow, Keras, diffusion models, transformers, reinforcement learning, VLMs and VLAs"
+      - name: Robotics and Simulation
         level: Advanced
         icon: fa-solid fa-robot
-        keywords: "Control systems, perception, planning, autonomy"
-      - name: Data Science
-        level: Intermediate
-        icon: fa-solid fa-chart-line
-        keywords: "Machine learning, data analysis, Python, statistics"
+        keywords: "ROS 2, MoveIt, MuJoCo, Isaac Sim, Gazebo, OpenCV, MATLAB, Simulink"
 
     Languages:
       - name: English
@@ -57,7 +135,4 @@ cv:
     Interests:
       - name: AI and Robotics
         icon: fa-solid fa-lightbulb
-        keywords: "Autonomy, perception, human-robot interaction"
-
-    References: []
-
+        keywords: "Robot learning, behavior prediction, motion generation, socially aware navigation, manipulation"

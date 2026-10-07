@@ -1,4 +1,4 @@
-![alt text](image.png)---
+---
 layout: default
 permalink: /blog/
 title: blog

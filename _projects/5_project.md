@@ -4,7 +4,6 @@ title: Transliteration System using Deep Learning
 date_range: Jan. 2021 – May. 2021
 advisor: Prof. Mitesh Khapra, CSE Department, IIT Madras
 tags: [Machine and Deep Learning]
-github: your-username/repo-name   # optional
 importance: 1
 category: past
 ---

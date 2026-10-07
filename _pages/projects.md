@@ -2,12 +2,17 @@
 layout: page
 title: projects
 permalink: /projects/
-description: These list out the projects I am working/have worked on.
+description: Robotics and machine learning projects. Recent work up top, earlier projects below.
 nav: true
 nav_order: 3
 display_categories: [recent, past]
 horizontal: false
 ---
+
+<style>
+  .publications h2.bibliography { display: none; }
+  .publications ol.bibliography { margin-top: 0; }
+</style>
 
 <div class="projects">
 
@@ -54,4 +59,8 @@ horizontal: false
     {% endfor %}
   </div>
 
+</div>
+<h2 class="category">publications</h2>
+<div class="publications">
+  {% bibliography %}
 </div>

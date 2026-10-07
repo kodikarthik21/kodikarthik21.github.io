@@ -1,18 +1,31 @@
 ---
-layout: page
-title: Semantic Segregation using VLMs and execution using motion planning
-description: Open-vocabulary object sorting with a Vision-Language Model and a Franka robotic arm
+layout: project
+title: Open-Vocabulary Object Sorting with a VLM and a Franka Arm
+description: A Vision-Language Model reasons over camera images and rack state to sort arbitrary household objects, executed with PRM motion planning on a Franka arm
 img: assets/img/semantic_seg_cover.jpg
 importance: 1
+methods: ["Vision-language models (Gemini 2.5 Pro, Qwen3-VL)", "Motion planning (PRM)"]
+tools: ["MuJoCo", "Franka Panda", "RealSense"]
 category: recent
+context: "16662 Robot Autonomy, Spring 2026, Carnegie Mellon University"
+team:
+  - name: Aman Tambi
+  - name: Kushal Agarwal
+  - name: Narayanan Palghat Parameshwaran
+  - name: Shubh Jain
+advisor_label: Instructor
+advisors:
+  - name: Oliver Kroemer
+    url: https://ri.cmu.edu/ri-faculty/oliver-kroemer
+    role: Robotics Institute
 ---
 
-16662 - Robot Autonomy course, Spring 2026, Carnegie Mellon University.
+**My role:** VLM benchmarking and integration, prompt engineering, the rack-audit JSON state machine, and object-level testing.
 
-Teammates: Aman Tambi, Kushal Agarwal, Narayanan Palghat Parameshwaran, Shubh Jain
+**Stack:** Python, Franka Emika Panda, Intel RealSense, MuJoCo, PRM motion planning, Gemini / Claude / Qwen VLM APIs
 
 
-This project integrates a Vision-Language Model (VLM) with a Franka Emika Panda arm to perform open-vocabulary semantic sorting — no category-specific training required. The robot picks up an object, shows it to a RealSense camera, queries the VLM with the image and current rack state, and places it in the semantically appropriate slot.
+This project integrates a Vision-Language Model (VLM) with a Franka Emika Panda arm to perform open-vocabulary semantic sorting - no category-specific training required. The robot picks up an object, shows it to a RealSense camera, queries the VLM with the image and current rack state, and places it in the semantically appropriate slot.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -23,7 +36,7 @@ This project integrates a Vision-Language Model (VLM) with a Franka Emika Panda 
     </div>
 </div>
 <div class="caption">
-    Left: Physical setup — Franka arm centered between two three-shelf racks with the Intel RealSense mounted on the right column. Right: The six-stage pipeline from pickup through VLM reasoning to placement.
+    Left: Physical setup - Franka arm centered between two three-shelf racks with the Intel RealSense mounted on the right column. Right: The six-stage pipeline from pickup through VLM reasoning to placement.
 </div>
 
 ---
@@ -39,6 +52,25 @@ Traditional robots struggle to identify and sort novel objects in unstructured e
 The pipeline runs as follows: the arm picks up an object and moves to an inspection pose visible to the camera. An RGB image is captured and sent to the VLM alongside a JSON record of the current rack state. The model returns a target slot and a natural-language explanation. The arm then deposits the object and resets for the next cycle.
 
 The rack audit JSON persists across the full session so the VLM can maintain consistent semantic groupings as the rack fills up.
+
+---
+
+## How the VLM Decides
+
+The placement policy the model follows: if the new object strongly matches an existing cluster, join it; otherwise start a new cluster in an empty slot, spatially separated from unrelated clusters. Every decision returns structured JSON with an auditable explanation. A real output from the trials:
+
+```json
+{
+  "chosen_location": "low-left",
+  "reasoning": "The new object is a video game controller, categorized as
+  'Gaming equipment'. This fits well with the existing 'Electronics accessory'
+  (universal travel power adapter) in the 'low-left' slot, as game controllers
+  are electronic devices and accessories. This creates a coherent grouping
+  for electronic accessories."
+}
+```
+
+Having the model justify each placement in writing made failures diagnosable: the one failed trial (an apple placed onto an already-full fruit slot) shows perfectly sound semantic reasoning in its JSON, which localized the bug to the rack-state representation missing physical capacity, not the model's judgment.
 
 ---
 
@@ -71,7 +103,7 @@ The failure revealed a gap in the rack audit: the JSON records slot occupancy by
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/sem_seg_final.jpg" title="Final rack configuration after all nine trials" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/sem_seg_final.png" title="Final rack configuration after all nine trials" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -88,6 +120,12 @@ Safe operation in the confined workspace used four layers: a static PRM-based co
 
 ## Team
 
-**Primary Implementation** — Aman Tambi, Kushal Agarwal, Shubh Jain: motion planning on the physical Franka arm, trajectory caching.
+**Primary Implementation** - Aman Tambi, Kushal Agarwal, Shubh Jain: motion planning on the physical Franka arm, trajectory caching.
 
-**Framework & Testing** — Narayanan Palghat Parameshwaran, Karthik Srinivasan: VLM benchmarking and integration, prompt engineering, rack audit JSON state machine, object-level testing.
+**Framework & Testing** - Narayanan Palghat Parameshwaran, Karthik Srinivasan: VLM benchmarking and integration, prompt engineering, rack audit JSON state machine, object-level testing.
+
+---
+
+## Documents
+
+- [Project report (IEEE format, PDF)](/assets/pdf/VLM_Object_Sorting_Report.pdf)

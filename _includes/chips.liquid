@@ -1,0 +1,8 @@
+{%- comment -%} Params: methods (tags), tools (arrays or "a|b|c" strings), max_m, max_t (optional limits), class (optional, e.g. center). No headings: tags are filled, tools outlined. Styles: _sass/_chips.scss {%- endcomment -%}
+{%- assign m = include.methods -%}{%- assign t = include.tools -%}
+{%- if m.first == nil and m != blank -%}{%- assign m = m | split: "|" -%}{%- endif -%}
+{%- if t.first == nil and t != blank -%}{%- assign t = t | split: "|" -%}{%- endif -%}
+{%- assign lm = include.max_m | default: 99 -%}{%- assign lt = include.max_t | default: 99 -%}
+{%- if m.size > 0 or t.size > 0 -%}
+<div class="chips {{ include.class }}">{% for x in m limit: lm %}<span>{{ x }}</span>{% endfor %}{% for x in t limit: lt %}<span class="tool">{{ x }}</span>{% endfor %}</div>
+{%- endif -%}
