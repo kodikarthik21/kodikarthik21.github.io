@@ -424,23 +424,23 @@ ninja.data = [{
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/13_project/";
-            },},{id: "projects-physics-guided-human-motion-diffusion",
-          title: 'Physics-guided human motion diffusion',
+            },},{id: "projects-physics-aware-reward-guidance-for-text-to-motion-generation",
+          title: 'Physics-Aware Reward Guidance for Text-to-Motion Generation',
           description: "Infusing a reward model at every denoising step to steer the model towards generating more physically plausible trajectories",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-automated-experimentation-laboratory-robot",
-          title: 'Automated Experimentation Laboratory Robot',
+            },},{id: "projects-mobile-manipulator-for-laboratory-automation",
+          title: 'Mobile Manipulator for Laboratory Automation',
           description: "An end-to-end automation system with a robotic arm integrated with lab machines to perform experiments autonomously.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
-            },},{id: "projects-open-vocabulary-object-sorting-with-a-vlm-and-a-franka-arm",
-          title: 'Open-Vocabulary Object Sorting with a VLM and a Franka Arm',
+            },},{id: "projects-open-vocabulary-object-sorting-with-a-vlm",
+          title: 'Open-Vocabulary Object Sorting with a VLM',
           description: "A Vision-Language Model reasons over camera images and rack state to sort arbitrary household objects, executed with PRM motion planning on a Franka arm",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
-            },},{id: "projects-speed-planning-of-autonomous-electric-truck-platoons",
-          title: 'Speed Planning of Autonomous Electric Truck Platoons',
+            },},{id: "projects-ai-driven-truck-platoon-framework",
+          title: 'AI-Driven Truck Platoon Framework',
           description: "A deep learning encoder-decoder model for speed planning of autonomous electric truck platoons.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_project/";
