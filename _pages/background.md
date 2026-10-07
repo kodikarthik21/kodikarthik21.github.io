@@ -74,13 +74,13 @@ nav_order: 2
 <div class="bg-edu">
   <div class="job">
     <div class="job-top">
-      <img src="/assets/img/cmu_logo.png" alt="Carnegie Mellon University">
+      <img src="{{ '/assets/img/cmu_logo.png' | relative_url }}" alt="Carnegie Mellon University">
       <div class="job-who"><b>Carnegie Mellon University</b><span>MS in Robotic Systems Development</span></div>
       <div class="job-when"><strong>2025 – 2027</strong>CGPA 4.08 / 4</div>
     </div>
     <ul>
       <li>Coursework: <strong>Generative AI, Computer Vision, Robot Autonomy, Manipulation, Estimation and Control, Intro to Robot Learning*, Learning for 3D Vision*</strong> <span style="color:var(--bg-mut);font-size:.85rem">(* in progress)</span></li>
-      <li>Capstone project: <a href="/projects/2_project/">mobile manipulator for laboratory automation</a>, with a team of 4. Advisor: <a href="https://www.cmu.edu/cbd/people/xu.html" target="_blank" rel="noopener">Dr. Min Xu</a>.</li>
+      <li>Capstone project: <a href="{{ '/projects/2_project/' | relative_url }}">mobile manipulator for laboratory automation</a>, with a team of 4. Advisor: <a href="https://www.cmu.edu/cbd/people/xu.html" target="_blank" rel="noopener">Dr. Min Xu</a>.</li>
     </ul>
     <details class="ta"><summary>Teaching assistantships (3)</summary>
       <ul>
@@ -92,13 +92,13 @@ nav_order: 2
   </div>
   <div class="job">
     <div class="job-top">
-      <img src="/assets/img/iitm_logo.jpg" alt="Indian Institute of Technology Madras">
+      <img src="{{ '/assets/img/iitm_logo.jpg' | relative_url }}" alt="Indian Institute of Technology Madras">
       <div class="job-who"><b>IIT Madras</b><span>B.Tech Mechanical Engineering + M.Tech Data Science</span></div>
       <div class="job-when"><strong>2018 – 2023</strong>CGPA 9.36 / 10</div>
     </div>
     <ul>
       <li>Coursework: <strong>Deep Learning, Data Analytics, Modern Control Theory, Non-Linear Systems Analysis, Process Optimization</strong></li>
-      <li>Thesis: <a href="/projects/4_project/">speed planning for electric truck platoons</a>, advised by Prof. Shankar Ram C S and Dr. Devika K B.</li>
+      <li>Thesis: <a href="{{ '/projects/4_project/' | relative_url }}">speed planning for electric truck platoons</a>, advised by Prof. Shankar Ram C S and Dr. Devika K B.</li>
       <li>Co-curricular: <strong>Team Captain, Raftar Formula Racing (Formula Student)</strong>. Led the team's transition from a combustion to an electric racecar and won the first design competition.</li>
     </ul>
     <details class="ta"><summary>Teaching assistantships (2)</summary>
@@ -131,7 +131,7 @@ nav_order: 2
 
   <div class="job">
     <div class="job-top">
-      <img src="/assets/img/serve_logo.png" alt="Serve Robotics">
+      <img src="{{ '/assets/img/serve_logo.png' | relative_url }}" alt="Serve Robotics">
       <div class="job-who"><b>Serve Robotics</b><span>Machine Learning Intern, Autonomy</span></div>
       <div class="job-when"><strong>May 2026 – Aug 2026</strong>San Carlos, CA</div>
     </div>
@@ -144,7 +144,7 @@ nav_order: 2
 
   <div class="job">
     <div class="job-top">
-      <img src="/assets/img/hsbc_logo.png" alt="HSBC">
+      <img src="{{ '/assets/img/hsbc_logo.png' | relative_url }}" alt="HSBC">
       <div class="job-who"><b>HSBC Global Markets</b><span>Equities Execution Services</span></div>
       <div class="job-when"><strong>Jul 2023 – Jul 2025</strong>Bengaluru, India</div>
     </div>
@@ -168,7 +168,7 @@ nav_order: 2
 
   <div class="job">
     <div class="job-top">
-      <img src="/assets/img/mathlogic_logo.jpg" alt="Mathlogic Consulting Services">
+      <img src="{{ '/assets/img/mathlogic_logo.jpg' | relative_url }}" alt="Mathlogic Consulting Services">
       <div class="job-who"><b>Mathlogic Consulting Services</b><span>Deep Learning Intern</span></div>
       <div class="job-when"><strong>May 2022 – Jul 2022</strong>Gurugram, India</div>
     </div>
@@ -182,7 +182,7 @@ nav_order: 2
 
   <div class="job">
     <div class="job-top">
-      <img src="/assets/img/osu_logo.jpg" alt="Ohio State University">
+      <img src="{{ '/assets/img/osu_logo.jpg' | relative_url }}" alt="Ohio State University">
       <div class="job-who"><b>Ohio State University</b><span>Research Intern, Movement Lab</span></div>
       <div class="job-when"><strong>Dec 2021 – Jan 2022</strong>Columbus, OH</div>
     </div>
@@ -195,7 +195,7 @@ nav_order: 2
 
   <div class="job">
     <div class="job-top">
-      <img src="/assets/img/tuberlin_logo.png" alt="TU Berlin">
+      <img src="{{ '/assets/img/tuberlin_logo.png' | relative_url }}" alt="TU Berlin">
       <div class="job-who"><b>Technische Universität Berlin</b><span>DAAD-WISE Research Intern, Control Systems Group</span></div>
       <div class="job-when"><strong>Jun 2021 – Aug 2021</strong>Berlin, Germany</div>
     </div>
@@ -218,6 +218,6 @@ nav_order: 2
     {% include projects.liquid %}
   {% endfor %}
 </div>
-<p style="text-align:right; font-size:.9rem;"><a href="/projects/">All projects &rarr;</a></p>
+<p style="text-align:right; font-size:.9rem;"><a href="{{ '/projects/' | relative_url }}">All projects &rarr;</a></p>
 
 </div>

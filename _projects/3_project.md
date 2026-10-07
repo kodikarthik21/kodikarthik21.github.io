@@ -128,4 +128,4 @@ Safe operation in the confined workspace used four layers: a static PRM-based co
 
 ## Documents
 
-- [Project report (IEEE format, PDF)](/assets/pdf/VLM_Object_Sorting_Report.pdf)
+- [Project report (IEEE format, PDF)]({{ '/assets/pdf/VLM_Object_Sorting_Report.pdf' | relative_url }})

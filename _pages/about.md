@@ -15,7 +15,7 @@ social: true # includes social icons at the bottom of the page
 ---
 
 <style>
-  .home-h { font-size: 1.2rem; font-weight: 700; margin: 2.2rem 0 .8rem; padding-bottom: .35rem; border-bottom: 1px solid var(--global-divider-color); }
+  .home-h { font-size: 1.2rem; overflow: hidden; font-weight: 700; margin: 2.2rem 0 .8rem; padding-bottom: .35rem; border-bottom: 1px solid var(--global-divider-color); }
   .work { display: flex; gap: 1.1rem; align-items: flex-start; padding: .9rem 0; }
   .work + .work { border-top: 1px solid var(--global-divider-color); }
   .work img { flex: none; width: 170px; height: 110px; object-fit: cover; border-radius: 8px; border: 1px solid var(--global-divider-color); }
@@ -39,6 +39,7 @@ social: true # includes social icons at the bottom of the page
   .edu-r b { display: block; font-size: .88rem; color: var(--global-text-color); }
   .edu-r span { display: block; font-size: .82rem; color: var(--global-text-color-light); }
   .edu-r em { display: block; font-size: .78rem; font-style: normal; color: var(--global-text-color-light); }
+  .post > article > p, .clearfix > p { font-size: .93rem; line-height: 1.6; font-weight: 400; }
   .publications h2.bibliography { display: none; }
   .publications ol.bibliography { margin-top: 0; }
 </style>
@@ -47,24 +48,24 @@ I'm a Robotics Master's student at Carnegie Mellon University (MRSD, class of 20
 
 My interests lie in teaching robots to act intelligently with machine learning (RL, imitation learning), spanning **behavior prediction, manipulation, and navigation (driving)**.
 
-I interned at Serve Robotics in Summer 2026, where I trained a **diffusion model** to predict pedestrian behavior and developed a framework for training an **RL** navigation policy in simulation (**PPO**, Unreal Engine) for moving around dense pedestrians. I am also working on the autonomy stack of a <a href="/projects/2_project/">mobile manipulator for automating lab experiments</a> as a part of my capstone project at CMU. I'm implementing an **Action Chunking Transformer** using **imitation learning** to place wellplates, with **Informed RRT\*** motion planning and **visual servoing** for grasping.
+I interned at Serve Robotics in Summer 2026, where I trained a **diffusion model** to predict pedestrian behavior and developed a framework for training an **RL** navigation policy in simulation (**PPO**, Unreal Engine) for moving around dense pedestrians. I am also working on the autonomy stack of a <a href="{{ '/projects/2_project/' | relative_url }}">mobile manipulator for automating lab experiments</a> as a part of my capstone project at CMU. I'm implementing an **Action Chunking Transformer** using **imitation learning** to place wellplates, with **Informed RRT\*** motion planning and **visual servoing** for grasping.
 
 I am looking for **full-time new grad roles starting May 2027**. Please feel free to reach out if you have any relevant openings!
 
-Outside work, I'm a foodie who enjoys exploring different cuisines and always up for trying something new! Feel free to send restaurant recommendations if we are in the same city :). I also enjoy playing badminton, tennis, and cricket recreationally, though I'm not formally trained in any of them. Let's connect on <a href="https://linkedin.com/in/srini-karthik">LinkedIn</a>, or see my <a href="/background/">background</a>.
+Outside work, I'm a foodie who enjoys exploring different cuisines and always up for trying something new! Feel free to send restaurant recommendations if we are in the same city :). I also enjoy playing badminton, tennis, and cricket recreationally, though I'm not formally trained in any of them. Let's connect on <a href="https://linkedin.com/in/srini-karthik">LinkedIn</a>, or see my <a href="{{ '/background/' | relative_url }}">background</a>.
 
 <h2 class="home-h">Selected work</h2>
 <div class="work">
-  <img src="/assets/img/apex_robot_opentrons.jpg" alt="APEX">
-  <div><b><a href="/projects/2_project/">APEX: an autonomous laboratory robot</a></b><p>A mobile manipulator that runs wet-lab protocols on its own. I built the perception models, motion planner, and gripper.</p>{% assign pj = site.projects | where_exp: "x", "x.path contains '/2_project.md'" | first %}{% include chips.liquid methods=pj.methods tools=pj.tools %}</div>
+  <img src="{{ '/assets/img/apex_robot_opentrons.jpg' | relative_url }}" alt="APEX">
+  <div><b><a href="{{ '/projects/2_project/' | relative_url }}">APEX: an autonomous laboratory robot</a></b><p>A mobile manipulator that runs wet-lab protocols on its own. I built the perception models, motion planner, and gripper.</p>{% assign pj = site.projects | where_exp: "x", "x.path contains '/2_project.md'" | first %}{% include chips.liquid methods=pj.methods tools=pj.tools %}</div>
 </div>
 <div class="work">
-  <img src="/assets/img/PRG_presentation.jpg" alt="PRG poster">
-  <div><b><a href="/projects/1_project/">Physics-guided human motion diffusion</a></b><p>A reward model steers every denoising step toward physically plausible motion. 3rd of 20 teams.</p>{% assign pj = site.projects | where_exp: "x", "x.path contains '/1_project.md'" | first %}{% include chips.liquid methods=pj.methods tools=pj.tools %}</div>
+  <img src="{{ '/assets/img/PRG_presentation.jpg' | relative_url }}" alt="PRG poster">
+  <div><b><a href="{{ '/projects/1_project/' | relative_url }}">Physics-guided human motion diffusion</a></b><p>A reward model steers every denoising step toward physically plausible motion. 3rd of 20 teams.</p>{% assign pj = site.projects | where_exp: "x", "x.path contains '/1_project.md'" | first %}{% include chips.liquid methods=pj.methods tools=pj.tools %}</div>
 </div>
 <div class="work">
-  <img src="/assets/img/semantic_seg_cover.jpg" alt="VLM sorting">
-  <div><b><a href="/projects/3_project/">Open-vocabulary object sorting with a VLM</a></b><p>A Franka arm sorts objects it has never seen using a vision-language model and PRM motion planning.</p>{% assign pj = site.projects | where_exp: "x", "x.path contains '/3_project.md'" | first %}{% include chips.liquid methods=pj.methods tools=pj.tools %}</div>
+  <img src="{{ '/assets/img/semantic_seg_cover.jpg' | relative_url }}" alt="VLM sorting">
+  <div><b><a href="{{ '/projects/3_project/' | relative_url }}">Open-vocabulary object sorting with a VLM</a></b><p>A Franka arm sorts objects it has never seen using a vision-language model and PRM motion planning.</p>{% assign pj = site.projects | where_exp: "x", "x.path contains '/3_project.md'" | first %}{% include chips.liquid methods=pj.methods tools=pj.tools %}</div>
 </div>
 
 <h2 class="home-h">Publications</h2>

@@ -65,11 +65,11 @@ Compared to PhysDiff (NVIDIA), the strongest physics-guided alternative, which e
 ### Generated samples
 
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.75rem;margin:1rem 0;">
-  <figure style="margin:0;text-align:center;"><img src="/assets/img/prg_motion_5.gif" alt="Denoising step 0" loading="lazy" style="width:100%;border-radius:10px;"><figcaption>Step 0</figcaption></figure>
-  <figure style="margin:0;text-align:center;"><img src="/assets/img/prg_motion_4.gif" alt="Denoising step 1" loading="lazy" style="width:100%;border-radius:10px;"><figcaption>Step 1</figcaption></figure>
-  <figure style="margin:0;text-align:center;"><img src="/assets/img/prg_motion_3.gif" alt="Denoising step 2" loading="lazy" style="width:100%;border-radius:10px;"><figcaption>Step 2</figcaption></figure>
-  <figure style="margin:0;text-align:center;"><img src="/assets/img/prg_motion_2.gif" alt="Denoising step 3" loading="lazy" style="width:100%;border-radius:10px;"><figcaption>Step 3</figcaption></figure>
-  <figure style="margin:0;text-align:center;"><img src="/assets/img/prg_motion_1.gif" alt="Denoising step 4" loading="lazy" style="width:100%;border-radius:10px;"><figcaption>Step 4</figcaption></figure>
+  <figure style="margin:0;text-align:center;"><img src="{{ '/assets/img/prg_motion_5.gif' | relative_url }}" alt="Denoising step 0" loading="lazy" style="width:100%;border-radius:10px;"><figcaption>Step 0</figcaption></figure>
+  <figure style="margin:0;text-align:center;"><img src="{{ '/assets/img/prg_motion_4.gif' | relative_url }}" alt="Denoising step 1" loading="lazy" style="width:100%;border-radius:10px;"><figcaption>Step 1</figcaption></figure>
+  <figure style="margin:0;text-align:center;"><img src="{{ '/assets/img/prg_motion_3.gif' | relative_url }}" alt="Denoising step 2" loading="lazy" style="width:100%;border-radius:10px;"><figcaption>Step 2</figcaption></figure>
+  <figure style="margin:0;text-align:center;"><img src="{{ '/assets/img/prg_motion_2.gif' | relative_url }}" alt="Denoising step 3" loading="lazy" style="width:100%;border-radius:10px;"><figcaption>Step 3</figcaption></figure>
+  <figure style="margin:0;text-align:center;"><img src="{{ '/assets/img/prg_motion_1.gif' | relative_url }}" alt="Denoising step 4" loading="lazy" style="width:100%;border-radius:10px;"><figcaption>Step 4</figcaption></figure>
 </div>
 <div class="caption">Motion decoded at denoising steps 0 to 4 (the first five of 50), shown as 3D skeletons.</div>
 
@@ -86,5 +86,5 @@ Physical plausibility can be learned cheaply from generated data and applied as 
 
 ## Documents
 
-- [Course report (PDF)](/assets/pdf/PRG_Report.pdf)
-- [Poster (PDF)](/assets/pdf/PRG_poster.pdf)
+- [Course report (PDF)]({{ '/assets/pdf/PRG_Report.pdf' | relative_url }})
+- [Poster (PDF)]({{ '/assets/pdf/PRG_poster.pdf' | relative_url }})

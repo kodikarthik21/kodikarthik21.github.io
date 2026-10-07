@@ -33,7 +33,7 @@ layout: default
           %}
         {% endif %}
         {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
+          {% capture src_base %}src="{{ site.baseurl }}/{% endcapture %}<div class="more-info">{{ page.profile.more_info | replace: 'src="/', src_base }}</div>
         {% endif %}
       </div>
     {% endif %}

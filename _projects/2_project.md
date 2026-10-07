@@ -185,6 +185,6 @@ Real systems fail in ways simulation never shows. A few problems we hit and how 
 
 ## Documents
 
-- [Spring Validation Demonstration summary (PDF)](/assets/pdf/APEX_SVD_Summary.pdf)
-- [Progress Review 4 slides (PDF)](/assets/pdf/APEX_Progress_Review_4.pdf)
-- [Individual Lab Report 05, planning subsystem (PDF)](/assets/pdf/APEX_ILR05_Karthik.pdf)
+- [Spring Validation Demonstration summary (PDF)]({{ '/assets/pdf/APEX_SVD_Summary.pdf' | relative_url }})
+- [Progress Review 4 slides (PDF)]({{ '/assets/pdf/APEX_Progress_Review_4.pdf' | relative_url }})
+- [Individual Lab Report 05, planning subsystem (PDF)]({{ '/assets/pdf/APEX_ILR05_Karthik.pdf' | relative_url }})

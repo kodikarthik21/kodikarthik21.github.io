@@ -28,3 +28,5 @@
 - Home: right-hand table of contents sidebar (Selected work / Publications) removed from about.md front matter so the text column uses the full width.
 - Home Seeking line: "I am seeking full-time new grad roles starting May 2027 in my areas of interest." (areas are stated in the Interests line).
 - Home Seeking line (latest): "I am looking for full-time new grad roles starting May 2027. Please feel free to reach out if you have any relevant openings!"
+- Home intro paragraphs: font-size .93rem (~15px), line-height 1.6, weight 400 (set in about.md style block).
+- Home: `.home-h` headings have `overflow: hidden` so their border line stops beside the floated profile column (no clear: both).
