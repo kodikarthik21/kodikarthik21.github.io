@@ -37,3 +37,4 @@
 - Background page: timeline dots (.job::before) removed; vertical line kept.
 - Background page: Skills boxes compact (align-items start, less padding); Q / KDB+ removed from Skills, ANSYS moved to Design and CAD. Experience shows only Serve; the rest sit in a <details class=past> 'Click to view past experiences'.
 - Project page titles match the resume: Physics-Aware Reward Guidance for Text-to-Motion Generation, Mobile Manipulator for Laboratory Automation, Open-Vocabulary Object Sorting with a VLM, AI-Driven Truck Platoon Framework.
+- Project titles live only in each _projects/*.md front matter; Background, Projects and the home Selected work all read project.title / pj.title. Change a title there and nowhere else.
