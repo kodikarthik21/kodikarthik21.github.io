@@ -214,13 +214,14 @@ nav_order: 2
 
 <h2 class="bg-h" id="projects"><i class="fa-solid fa-flask"></i> Selected projects</h2>
 
-<div class="row row-cols-1 row-cols-md-3">
+<div class="projects"><div class="row row-cols-1 row-cols-md-3">
   {% assign featured = "2_project,1_project,3_project" | split: "," %}
   {% for id in featured %}
     {% assign path = "_projects/" | append: id | append: ".md" %}
     {% assign project = site.projects | where: "path", path | first %}
     {% include projects.liquid %}
   {% endfor %}
+</div>
 </div>
 <p style="text-align:right; font-size:.9rem;"><a href="{{ '/projects/' | relative_url }}">All projects &rarr;</a></p>
 
