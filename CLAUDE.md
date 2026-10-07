@@ -31,3 +31,4 @@
 - Home intro paragraphs: font-size .93rem (~15px), line-height 1.6, weight 400 (set in about.md style block).
 - Home: `.home-h` headings have `overflow: hidden` so their border line stops beside the floated profile column (no clear: both).
 - Home "Selected work" titles match the resume: Mobile Manipulator for Laboratory Automation; Physics-Aware Reward Guidance for Text-to-Motion Generation; Open-Vocabulary Object Sorting with a VLM.
+- APEX page Planning figures: motion_planning.png uses col-sm-8, voxel scene col-sm-4 so the slide text is readable.
