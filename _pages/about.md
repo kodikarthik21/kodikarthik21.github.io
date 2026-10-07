@@ -57,15 +57,15 @@ Outside work, I'm a foodie who enjoys exploring different cuisines and always up
 <h2 class="home-h">Selected work</h2>
 <div class="work">
   <img src="{{ '/assets/img/apex_robot_opentrons.jpg' | relative_url }}" alt="APEX">
-  <div><b><a href="{{ '/projects/2_project/' | relative_url }}">Mobile Manipulator for Laboratory Automation</a></b><p>A mobile manipulator that runs wet-lab protocols on its own. I built the perception models, motion planner, and gripper.</p>{% assign pj = site.projects | where_exp: "x", "x.path contains '/2_project.md'" | first %}{% include chips.liquid methods=pj.methods tools=pj.tools %}</div>
+  {% assign pj = site.projects | where_exp: "x", "x.path contains '/2_project.md'" | first %}<div><b><a href="{{ '/projects/2_project/' | relative_url }}">{{ pj.title }}</a></b><p>A mobile manipulator that runs wet-lab protocols on its own. I built the perception models, motion planner, and gripper.</p>{% include chips.liquid methods=pj.methods tools=pj.tools %}</div>
 </div>
 <div class="work">
   <img src="{{ '/assets/img/PRG_presentation.jpg' | relative_url }}" alt="PRG poster">
-  <div><b><a href="{{ '/projects/1_project/' | relative_url }}">Physics-Aware Reward Guidance for Text-to-Motion Generation</a></b><p>A reward model steers every denoising step toward physically plausible motion. 3rd of 20 teams.</p>{% assign pj = site.projects | where_exp: "x", "x.path contains '/1_project.md'" | first %}{% include chips.liquid methods=pj.methods tools=pj.tools %}</div>
+  {% assign pj = site.projects | where_exp: "x", "x.path contains '/1_project.md'" | first %}<div><b><a href="{{ '/projects/1_project/' | relative_url }}">{{ pj.title }}</a></b><p>A reward model steers every denoising step toward physically plausible motion. 3rd of 20 teams.</p>{% include chips.liquid methods=pj.methods tools=pj.tools %}</div>
 </div>
 <div class="work">
   <img src="{{ '/assets/img/semantic_seg_cover.jpg' | relative_url }}" alt="VLM sorting">
-  <div><b><a href="{{ '/projects/3_project/' | relative_url }}">Open-Vocabulary Object Sorting with a VLM</a></b><p>A Franka arm sorts objects it has never seen using a vision-language model and PRM motion planning.</p>{% assign pj = site.projects | where_exp: "x", "x.path contains '/3_project.md'" | first %}{% include chips.liquid methods=pj.methods tools=pj.tools %}</div>
+  {% assign pj = site.projects | where_exp: "x", "x.path contains '/3_project.md'" | first %}<div><b><a href="{{ '/projects/3_project/' | relative_url }}">{{ pj.title }}</a></b><p>A Franka arm sorts objects it has never seen using a vision-language model and PRM motion planning.</p>{% include chips.liquid methods=pj.methods tools=pj.tools %}</div>
 </div>
 
 <h2 class="home-h">Publications</h2>
