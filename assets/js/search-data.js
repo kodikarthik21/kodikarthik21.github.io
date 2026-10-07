@@ -9,9 +9,16 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-projects",
+  },{id: "nav-background",
+          title: "background",
+          description: "Experience, projects, publications, education and skills.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/background/";
+          },
+        },{id: "nav-projects",
           title: "projects",
-          description: "These list out the projects I am working/have worked on.",
+          description: "Robotics and machine learning projects. Recent work up top, earlier projects below.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -407,6 +414,16 @@ ninja.data = [{
           description: "(Apr 2019 -&gt; Mar 2022) Frame &amp; Composites Engineer → Team Captain. Built and raced formula-style cars at IIT Madras over three years.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/10_project/";
+            },},{id: "projects-character-recognition-amp-object-tracking",
+          title: 'Character Recognition &amp;amp; Object Tracking',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/12_project/";
+            },},{id: "projects-3d-scene-reconstruction-amp-epipolar-geometry",
+          title: '3D Scene Reconstruction &amp;amp; Epipolar Geometry',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/13_project/";
             },},{id: "projects-physics-guided-human-motion-diffusion",
           title: 'Physics-guided human motion diffusion',
           description: "Infusing a reward model at every denoising step to steer the model towards generating more physically plausible trajectories",
@@ -417,9 +434,9 @@ ninja.data = [{
           description: "An end-to-end automation system with a robotic arm integrated with lab machines to perform experiments autonomously.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
-            },},{id: "projects-semantic-segregation-using-vlms-and-execution-using-motion-planning",
-          title: 'Semantic Segregation using VLMs and execution using motion planning',
-          description: "Open-vocabulary object sorting with a Vision-Language Model and a Franka robotic arm",
+            },},{id: "projects-open-vocabulary-object-sorting-with-a-vlm-and-a-franka-arm",
+          title: 'Open-Vocabulary Object Sorting with a VLM and a Franka Arm',
+          description: "A Vision-Language Model reasons over camera images and rack state to sort arbitrary household objects, executed with PRM motion planning on a Franka arm",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
             },},{id: "projects-speed-planning-of-autonomous-electric-truck-platoons",
@@ -482,13 +499,6 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://www.linkedin.com/in/srini-karthik", "_blank");
-        },
-      },{
-        id: 'social-rss',
-        title: 'RSS Feed',
-        section: 'Socials',
-        handler: () => {
-          window.open("/feed.xml", "_blank");
         },
       },{
       id: 'light-theme',
