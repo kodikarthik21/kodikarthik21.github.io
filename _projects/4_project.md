@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Speed Planning of Autonomous Electric Truck Platoons
+title: AI-Driven Truck Platoon Framework
 description: A deep learning encoder-decoder model for speed planning of autonomous electric truck platoons.
 img: assets/img/heliyon_bigpicture.png
 importance: 1

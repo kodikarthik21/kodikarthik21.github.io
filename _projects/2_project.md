@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Automated Experimentation Laboratory Robot
+title: Mobile Manipulator for Laboratory Automation
 description: An end-to-end automation system with a robotic arm integrated with lab machines to perform experiments autonomously.
 img: assets/img/apex_robot_opentrons.jpg
 importance: 1

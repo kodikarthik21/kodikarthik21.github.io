@@ -36,3 +36,4 @@
 - Home page HSBC date shown as Jul 2023 - Jul 2025 (matches Background page).
 - Background page: timeline dots (.job::before) removed; vertical line kept.
 - Background page: Skills boxes compact (align-items start, less padding); Q / KDB+ removed from Skills, ANSYS moved to Design and CAD. Experience shows only Serve; the rest sit in a <details class=past> 'Click to view past experiences'.
+- Project page titles match the resume: Physics-Aware Reward Guidance for Text-to-Motion Generation, Mobile Manipulator for Laboratory Automation, Open-Vocabulary Object Sorting with a VLM, AI-Driven Truck Platoon Framework.

@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Open-Vocabulary Object Sorting with a VLM and a Franka Arm
+title: Open-Vocabulary Object Sorting with a VLM
 description: A Vision-Language Model reasons over camera images and rack state to sort arbitrary household objects, executed with PRM motion planning on a Franka arm
 img: assets/img/semantic_seg_cover.jpg
 importance: 1

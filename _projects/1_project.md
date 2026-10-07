@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Physics-guided human motion diffusion
+title: Physics-Aware Reward Guidance for Text-to-Motion Generation
 description: Infusing a reward model at every denoising step to steer the model towards generating more physically plausible trajectories
 img: assets/img/PRG_presentation.jpg
 importance: 1
