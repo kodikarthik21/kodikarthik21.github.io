@@ -28,7 +28,7 @@ nav_order: 2
  position: relative; padding-left: 1.6rem; }
   .tl::before { content: ""; position: absolute; left: .45rem; top: .4rem; bottom: .4rem; width: 2px; background: var(--bg-line); }
   .job { position: relative; margin-bottom: 1.25rem; padding: 1.1rem 1.25rem; border: 1px solid var(--bg-line); border-radius: 14px; background: var(--bg-card); }
-  .job::before { content: ""; position: absolute; left: -1.55rem; top: 1.5rem; width: 12px; height: 12px; border-radius: 50%; background: var(--bg-acc); box-shadow: 0 0 0 4px var(--global-bg-color); }
+  .job::before { display: none; }
   .job-top { display: flex; gap: .9rem; align-items: center; }
   .job-top img { width: 52px; height: 52px; object-fit: contain; border-radius: 10px; background: #fff; flex: none; }
   .job-who { flex: 1; min-width: 0; }
@@ -60,7 +60,7 @@ nav_order: 2
   .skills h3 { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; color: var(--bg-acc); margin: 0 0 .6rem; }
   .skills .tools { margin-top: 0; }
   .skills .tools span { background: transparent; border: 1px solid var(--bg-line); color: var(--global-text-color); font-weight: 500; }
-  @media (max-width: 576px) { .job-top { flex-wrap: wrap; } .job-when { text-align: left; width: 100%; } .tl { padding-left: 1.2rem; } .job::before { left: -1.2rem; } }
+  @media (max-width: 576px) { .job-top { flex-wrap: wrap; } .job-when { text-align: left; width: 100%; } .tl { padding-left: 1.2rem; } }
 </style>
 
 <div class="bg">
