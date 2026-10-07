@@ -32,3 +32,4 @@
 - Home: `.home-h` headings have `overflow: hidden` so their border line stops beside the floated profile column (no clear: both).
 - Home "Selected work" titles match the resume: Mobile Manipulator for Laboratory Automation; Physics-Aware Reward Guidance for Text-to-Motion Generation; Open-Vocabulary Object Sorting with a VLM.
 - APEX page Planning figures: motion_planning.png uses col-sm-8, voxel scene col-sm-4 so the slide text is readable.
+- CMU education end date shown as May 2027 (about.md, background.md, cv.yml); IIT Madras unchanged.

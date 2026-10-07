@@ -76,7 +76,7 @@ nav_order: 2
     <div class="job-top">
       <img src="{{ '/assets/img/cmu_logo.png' | relative_url }}" alt="Carnegie Mellon University">
       <div class="job-who"><b>Carnegie Mellon University</b><span>MS in Robotic Systems Development</span></div>
-      <div class="job-when"><strong>2025 – 2027</strong>CGPA 4.08 / 4</div>
+      <div class="job-when"><strong>2025 – May 2027</strong>CGPA 4.08 / 4</div>
     </div>
     <ul>
       <li>Coursework: <strong>Generative AI, Computer Vision, Robot Autonomy, Manipulation, Estimation and Control, Intro to Robot Learning*, Learning for 3D Vision*</strong> <span style="color:var(--bg-mut);font-size:.85rem">(* in progress)</span></li>
