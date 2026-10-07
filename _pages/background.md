@@ -54,12 +54,14 @@ nav_order: 2
   .bg-edu details.ta li { font-size: .88rem; margin-bottom: .3rem; }
   .bg-edu details.ta li em { font-style: normal; color: var(--bg-mut); margin-left: .4rem; font-size: .8rem; }
   .bg-edu .job::before { display: none; }
-  .skills { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+  .skills { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; align-items: start; }
   @media (max-width: 992px) { .skills { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  .skills > div { padding: 1rem 1.1rem; border: 1px solid var(--bg-line); border-radius: 14px; background: var(--bg-card); }
-  .skills h3 { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; color: var(--bg-acc); margin: 0 0 .6rem; }
+  .skills > div { padding: .7rem .9rem; border: 1px solid var(--bg-line); border-radius: 14px; background: var(--bg-card); }
+  .skills h3 { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; color: var(--bg-acc); margin: 0 0 .4rem; }
   .skills .tools { margin-top: 0; }
   .skills .tools span { background: transparent; border: 1px solid var(--bg-line); color: var(--global-text-color); font-weight: 500; }
+  .past { margin-top: .6rem; }
+  .past > summary { cursor: pointer; font-weight: 600; color: var(--bg-acc); padding: .5rem 0; }
   @media (max-width: 576px) { .job-top { flex-wrap: wrap; } .job-when { text-align: left; width: 100%; } .tl { padding-left: 1.2rem; } }
 </style>
 
@@ -113,10 +115,10 @@ nav_order: 2
 <h2 class="bg-h" id="skills"><i class="fa-solid fa-screwdriver-wrench"></i> Skills</h2>
 
 <div class="skills">
-  <div><h3>Programming and data</h3><div class="tools"><span>Python</span><span>C++</span><span>SQL</span><span>Q / KDB+</span></div></div>
+  <div><h3>Programming and data</h3><div class="tools"><span>Python</span><span>C++</span><span>SQL</span></div></div>
   <div><h3>Machine learning</h3><div class="tools"><span>PyTorch</span><span>Keras</span><span>TensorFlow</span></div></div>
-  <div><h3>Robotics and simulation</h3><div class="tools"><span>ROS2</span><span>MoveIt</span><span>MuJoCo</span><span>IsaacSim</span><span>MATLAB</span><span>Simulink</span><span>ANSYS</span></div></div>
-  <div><h3>Design and CAD</h3><div class="tools"><span>SolidWorks</span><span>Fusion 360</span><span>CATIA</span></div></div>
+  <div><h3>Robotics and simulation</h3><div class="tools"><span>ROS2</span><span>MoveIt</span><span>MuJoCo</span><span>IsaacSim</span><span>MATLAB</span><span>Simulink</span></div></div>
+  <div><h3>Design and CAD</h3><div class="tools"><span>SolidWorks</span><span>Fusion 360</span><span>CATIA</span><span>ANSYS</span></div></div>
 </div>
 
 <h2 class="bg-h" id="publications"><i class="fa-solid fa-book-open"></i> Publications</h2>
@@ -142,6 +144,7 @@ nav_order: 2
     {% include chips.liquid methods="Diffusion models (NVIDIA TRACE)|Reinforcement learning (PPO)|Privileged teacher policy|Pedestrian behavior prediction" tools="PyTorch|Unreal Engine" %}
   </div>
 
+  <details class="past"><summary>Click to view past experiences</summary>
   <div class="job">
     <div class="job-top">
       <img src="{{ '/assets/img/hsbc_logo.png' | relative_url }}" alt="HSBC">
@@ -206,6 +209,7 @@ nav_order: 2
     {% include chips.liquid methods="Iterative learning control|Multi-agent systems" tools="Python" %}
   </div>
 
+  </details>
 </div>
 
 <h2 class="bg-h" id="projects"><i class="fa-solid fa-flask"></i> Selected projects</h2>
