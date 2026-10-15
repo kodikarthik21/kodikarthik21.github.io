@@ -48,12 +48,13 @@ Formula Student (FSAE) is an international collegiate engineering competition wh
 <div class="row">
   <div class="col-sm-6 mt-3 mt-md-0">
     {% include figure.liquid path="assets/img/layup.jpg" class="img-fluid rounded z-depth-1" %}
+    <div class="caption">Composite layup sessions.</div>
   </div>
   <div class="col-sm-6 mt-3 mt-md-0">
     {% include figure.liquid path="assets/img/cheering.jpg" class="img-fluid rounded z-depth-1" %}
+    <div class="caption">The Raftar team cheering together.</div>
   </div>
 </div>
-<div class="caption">Composite layup sessions.</div>
 
 ### Formula Bharat 2020 - Results
 
