@@ -94,7 +94,7 @@ nav_order: 2
   </div>
   <div class="job">
     <div class="job-top">
-      <img src="{{ '/assets/img/iitm_logo.jpg' | relative_url }}" alt="Indian Institute of Technology Madras">
+      <img src="{{ '/assets/img/iitm_logo.png' | relative_url }}" alt="Indian Institute of Technology Madras">
       <div class="job-who"><b>IIT Madras</b><span>B.Tech Mechanical Engineering + M.Tech Data Science</span></div>
       <div class="job-when"><strong>2018 – 2023</strong>CGPA 9.36 / 10</div>
     </div>
