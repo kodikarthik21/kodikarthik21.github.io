@@ -25,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-cv",
           title: "CV",
-          description: "MS student in Robotic Systems Development at Carnegie Mellon University, working at the intersection of AI and robotics.",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
