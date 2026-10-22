@@ -286,3 +286,143 @@ ul.cv-items {
   margin-top: 0.35rem;
   color: var(--global-text-color);
 }
+
+/*****************************
+ * Two-column CV page (_layouts/cv.liquid)
+ *****************************/
+
+.cvx {
+  max-width: 900px;
+  margin: 1.5rem auto 0;
+  color: var(--global-text-color);
+}
+
+.cvx-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.cvx-name {
+  display: flex;
+  flex-direction: column;
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.cvx-subtitle {
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--global-text-color-light);
+  margin: 0.5rem 0 0;
+}
+
+.cvx-avatar {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.cvx-divider {
+  height: 2px;
+  background: var(--global-text-color);
+  margin: 1.25rem 0 1.75rem;
+}
+
+.cvx-content {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 3rem;
+}
+
+.cvx-main,
+.cvx-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  min-width: 0;
+}
+
+.cvx-block {
+  h2 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0 0 0.6rem;
+    color: var(--global-text-color);
+  }
+  p {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: var(--global-text-color);
+    margin: 0 0 0.3rem;
+  }
+  ul {
+    padding-left: 1.15rem;
+    margin: 0.25rem 0 0;
+  }
+  li {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0.25rem;
+  }
+}
+
+.cvx-item {
+  margin-bottom: 1.1rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  h3 {
+    font-size: 0.98rem;
+    font-weight: 600;
+    margin: 0 0 0.15rem;
+    color: var(--global-text-color);
+  }
+}
+
+.cvx-block p.cvx-meta {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--global-text-color-light);
+  margin-bottom: 0.25rem;
+}
+
+.cvx-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  a {
+    text-decoration: underline;
+    font-size: 0.95rem;
+  }
+}
+
+.cvx-download {
+  padding-top: 1rem;
+  border-top: 1px solid var(--global-divider-color);
+  a {
+    text-decoration: underline;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cvx-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .cvx-header {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+  .cvx-name {
+    font-size: 1.9rem;
+  }
+}

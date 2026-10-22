@@ -1,6 +1,7 @@
 {%- assign _d = include.d | strip -%}
+{%- assign _f = include.fmt | default: '%b %Y' -%}
 {%- assign _parts = _d | split: '-' -%}
 {%- if _d == '' -%}
-{%- elsif _parts.size >= 2 -%}{{ _parts[0] | append: '-' | append: _parts[1] | append: '-01' | date: '%b %Y' }}
+{%- elsif _parts.size >= 2 -%}{{ _parts[0] | append: '-' | append: _parts[1] | append: '-01' | date: _f }}
 {%- else -%}{{ _d }}
 {%- endif -%}
