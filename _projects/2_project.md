@@ -1,10 +1,11 @@
 ---
 layout: project
 title: Mobile Manipulator for Laboratory Automation
+date_range: Jan 2026 – Present
 description: An end-to-end automation system with a robotic arm integrated with lab machines to perform experiments autonomously.
 img: assets/img/apex_robot_opentrons.jpg
 importance: 1
-methods: ["Imitation learning", "Action Chunking Transformer", "Motion planning (Informed RRT*)", "Visual servoing", "Perception (point cloud processing, YOLO26, SAM3 distillation)"]
+methods: ["Imitation learning", "Action Chunking Transformer", "Motion planning", "Visual servoing", "Perception"]
 tools: ["C++", "MoveIt", "ROS 2", "Isaac Sim"]
 category: recent
 related_publications: false

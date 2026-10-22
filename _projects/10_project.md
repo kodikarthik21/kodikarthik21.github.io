@@ -1,6 +1,7 @@
 ---
 layout: project
 title: Projects as Team Captain, Raftar Formula Racing
+date_range: Apr 2019 – Mar 2022
 description: (Apr 2019 -> Mar 2022) Frame & Composites Engineer → Team Captain. Built and raced formula-style cars at IIT Madras over three years.
 img: assets/img/formula-student-banner.jpg
 importance: 5

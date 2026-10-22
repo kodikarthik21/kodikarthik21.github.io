@@ -63,6 +63,7 @@ layout: default
   .pj-body blockquote { margin: 1.25rem 0; padding: .9rem 1.1rem; border-left: 4px solid var(--pj-accent); background: var(--pj-accent-soft); border-radius: 0 10px 10px 0; color: var(--pj-text); }
   .pj-body .video-container { border-radius: 14px; overflow: hidden; border: 1px solid var(--pj-border); box-shadow: var(--pj-shadow); }
   .pj-body pre { background: var(--pj-surface); border: 1px solid var(--pj-border); border-radius: 10px; padding: 1rem; }
+  .pj-date { display: inline-flex; align-items: center; gap: .45rem; margin: .2rem 0 .9rem; padding: .3rem .85rem; border-radius: 999px; background: var(--pj-accent-soft); color: var(--pj-accent); font-weight: 600; font-size: .9rem; }
   .pj-foot { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--pj-border); text-align: center; }
   @media (max-width: 576px) { .pj-body h2 { font-size: 1.4rem; } .pj-nav { top: 48px; } }
 </style>
@@ -73,6 +74,7 @@ layout: default
   <header class="pj-hero">
     <span class="pj-eyebrow">{% if page.category == 'recent' %}Project{% else %}{{ page.category }}{% endif %}</span>
     <h1 class="pj-title">{{ page.title }}</h1>
+    {% if page.date_range %}<div class="pj-date"><i class="fa-regular fa-calendar"></i> {{ page.date_range }}</div>{% endif %}
     {% if page.team or page.advisors or page.context %}
     <div class="pj-people">
       {% if page.team %}<div><span class="pj-plabel">Team</span>{% for p in page.team %}{% if p.url %}<a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.name }}</a>{% else %}<span>{{ p.name }}</span>{% endif %}{% unless forloop.last %}<i>·</i>{% endunless %}{% endfor %}</div>{% endif %}

@@ -1,10 +1,11 @@
 ---
 layout: project
 title: Open-Vocabulary Object Sorting with a VLM
+date_range: Jan 2026 – May 2026
 description: A Vision-Language Model reasons over camera images and rack state to sort arbitrary household objects, executed with PRM motion planning on a Franka arm
 img: assets/img/semantic_seg_cover.jpg
 importance: 1
-methods: ["Vision-language models (Gemini 2.5 Pro, Qwen3-VL)", "Motion planning (PRM)"]
+methods: ["Vision-language models (Gemini 2.5 Pro, Qwen3-VL)", "Motion planning"]
 tools: ["MuJoCo", "Franka Panda", "RealSense"]
 category: recent
 context: "16662 Robot Autonomy, Spring 2026, Carnegie Mellon University"
@@ -128,4 +129,4 @@ Safe operation in the confined workspace used four layers: a static PRM-based co
 
 ## Documents
 
-- [Project report (IEEE format, PDF)]({{ '/assets/pdf/VLM_Object_Sorting_Report.pdf' | relative_url }})
+- [Project report]({{ '/assets/pdf/VLM_Object_Sorting_Report.pdf' | relative_url }})

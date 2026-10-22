@@ -1,0 +1,8 @@
+{%- capture _s -%}{% include cv/fmt_date.liquid d=include.start %}{%- endcapture -%}
+{%- capture _e -%}{% include cv/fmt_date.liquid d=include.end %}{%- endcapture -%}
+{%- if _e == '' -%}{%- assign _e = 'Present' -%}{%- endif -%}
+<div class="cv-head">
+  <div class="cv-title">{% if include.url %}<a href="{{ include.url }}" target="_blank" rel="noopener">{{ include.title }}</a>{% else %}{{ include.title }}{% endif %}</div>
+  {% if include.when %}<div class="cv-when">{{ include.when }}</div>{% elsif _s != '' %}<div class="cv-when">{{ _s }} – {{ _e }}</div>{% endif %}
+</div>
+<div class="cv-sub">{{ include.sub }}{% if include.location and include.location != '' %}<span class="cv-loc"><i class="fa-solid fa-location-dot"></i> {{ include.location }}</span>{% endif %}</div>

@@ -1,6 +1,7 @@
 ---
 layout: project
 title: AI-Driven Truck Platoon Framework
+date_range: 2022 – 2023
 description: A deep learning encoder-decoder model for speed planning of autonomous electric truck platoons.
 img: assets/img/heliyon_bigpicture.png
 importance: 1

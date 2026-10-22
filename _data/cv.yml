@@ -1,11 +1,9 @@
 cv:
   name: Karthik Srinivasan
-  label: MS Student in Robotic Systems Development, Carnegie Mellon University
   email: ksriniv2@andrew.cmu.edu
   location: Pittsburgh, PA, USA
   website: https://kodikarthik21.github.io
   image: ""
-  summary: Robotics graduate student working on machine learning for autonomy. Diffusion models for behavior prediction and motion generation, reinforcement learning for navigation, and vision-language models for robot task reasoning. Currently a Machine Learning Intern at Serve Robotics.
 
   social_networks:
     - network: GitHub
@@ -21,10 +19,10 @@ cv:
         position: Machine Learning Intern, Autonomy
         location: San Carlos, CA, USA
         start_date: "2026-05"
-        end_date: ""
+        end_date: "2026-08"
         highlights:
           - Built a pedestrian behavior prediction model using a diffusion framework (NVIDIA TRACE), trained on 40+ hours of real-world sidewalk deployment data to forecast pedestrian trajectories and dynamic obstacle interactions.
-          - Training an end-to-end reinforcement learning navigation policy in simulation with a custom reward model, enabling socially aware maneuvers such as yielding on narrow sidewalks.
+          - Trained an end-to-end reinforcement learning navigation policy in simulation with a custom reward model, enabling socially aware maneuvers such as yielding on narrow sidewalks.
 
       - company: HSBC Global Markets
         position: Senior Associate, Quantitative Modeling (Equities Execution)
