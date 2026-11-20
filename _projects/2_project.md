@@ -24,7 +24,7 @@ advisors:
 
 **APEX** (Automated Precision EXperimentation) is an integrated platform that couples a mobile manipulator with networked lab machines for autonomous experiment execution.
 
-**My role:** planning and manipulation-integration lead - grasp planning (RRTConnect for the global approach, Cartesian planning for the final constrained descent), MoveIt + Isaac Sim hardware-in-the-loop simulation, live ZED point-cloud ingestion into the MoveIt collision environment as voxel occupancy maps, AprilTag-based target localization (camera-frame detection through extrinsic calibration to base-frame goal poses), and physical integration of the planning stack with the xArm6.
+**My role:** planning and manipulation-integration lead - grasp planning (Informed RRT* for the global approach, Cartesian planning for the final constrained descent), MoveIt + Isaac Sim hardware-in-the-loop simulation, live ZED point-cloud ingestion into the MoveIt collision environment as voxel occupancy maps, AprilTag-based target localization (camera-frame detection through extrinsic calibration to base-frame goal poses), and physical integration of the planning stack with the xArm6.
 
 **Stack:** Python, ROS 2, MoveIt, OMPL, Isaac Sim, PyTorch (YOLO), ZED X stereo cameras, xArm6, behavior trees
 
@@ -45,7 +45,7 @@ APEX integrates perception, planning, manipulation, and lightweight lab-device A
 ## Demo
 
 <div class="video-container" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;">
-  <iframe src="https://www.youtube.com/embed/vI8Z9WY06Nc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+  <iframe src="https://drive.google.com/file/d/1aXe5J5QAOAYPAC1xM4ekEIH0kg_-daSt/preview" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
 </div>
 
 ---
@@ -64,10 +64,10 @@ APEX integrates perception, planning, manipulation, and lightweight lab-device A
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/apex_functional_arch.png" title="Functional architecture" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/apex_architecture_flow.png" title="System architecture" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<div class="caption">Functional architecture: from user input through perception, planning, manipulation, and lab machine integration to experiment results.</div>
+<div class="caption">How APEX works: each subsystem, what it does, and the algorithm or model behind it.</div>
 
 
 
@@ -89,7 +89,7 @@ Two ZED stereo cameras feed YOLO-based detectors. The overhead camera scans the 
 <div class="caption">Left: Top camera detecting a wellplate (99.5% mAP50), and the point cloud of the environment in RViz used for collision-aware planning. Right: Gripper camera centering on target (99.4% mAP50). </div>
 
 ### Planning
-Sampling-based planners (RRTConnect and PRM via OMPL and MoveIt) consume voxelized point clouds from the live ZED feed and publish collision-free trajectories over ROS2. Gripper orientation is constrained throughout every trajectory to prevent liquid spillage, which shrinks the valid configuration space dramatically; reliability came from bounding the planning workspace, path shortening, and a Cartesian planner for the final constrained descent to the grasp. The system achieved a **100% planning success rate** (target: 95%) across all tested source-destination pairs.
+Informed RRT* (via OMPL and MoveIt) plans dynamically: before every plan the point cloud from the live ZED feed is refreshed, since the robot is at a new location, and the voxelized cloud is used to publish collision-free trajectories over ROS2. Gripper orientation is constrained throughout every trajectory to prevent liquid spillage, which shrinks the valid configuration space dramatically; reliability came from bounding the planning workspace, path shortening, and a Cartesian planner for the final constrained descent to the grasp. The system achieved a **100% planning success rate** (target: 95%) across all tested source-destination pairs.
 
 <div class="row mt-2">
     <div class="col-sm-8 mt-3 mt-md-0">
