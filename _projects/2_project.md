@@ -24,7 +24,7 @@ advisors:
 
 **APEX** (Automated Precision EXperimentation) is an integrated platform that couples a mobile manipulator with networked lab machines for autonomous experiment execution.
 
-**My role:** planning and manipulation-integration lead - grasp planning (Informed RRT* for the global approach, Cartesian planning for the final constrained descent), MoveIt + Isaac Sim hardware-in-the-loop simulation, live ZED point-cloud ingestion into the MoveIt collision environment as voxel occupancy maps, AprilTag-based target localization (camera-frame detection through extrinsic calibration to base-frame goal poses), and physical integration of the planning stack with the xArm6.
+**My role:** perception, planning and manipulation - grasp planning (Informed RRT* for the global approach, Cartesian planning for the final constrained descent), MoveIt + Isaac Sim hardware-in-the-loop simulation, live ZED point-cloud ingestion into the MoveIt collision environment as voxel occupancy maps, AprilTag-based target localization (camera-frame detection through extrinsic calibration to base-frame goal poses), and physical integration of the planning stack with the xArm6.
 
 **Stack:** Python, ROS 2, MoveIt, OMPL, Isaac Sim, PyTorch (YOLO), ZED X stereo cameras, xArm6, behavior trees
 
