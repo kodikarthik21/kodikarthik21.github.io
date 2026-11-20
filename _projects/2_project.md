@@ -42,6 +42,19 @@ APEX integrates perception, planning, manipulation, and lightweight lab-device A
 
 ---
 
+## Architecture
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/apex_architecture_flow.png" title="System architecture" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">How APEX works: each subsystem, what it does, and the algorithm or model behind it.</div>
+
+
+
+---
+
 ## Demo
 
 <div class="video-container">
@@ -57,19 +70,6 @@ APEX integrates perception, planning, manipulation, and lightweight lab-device A
 - Planning subsystem achieved 100% success rate (target: 95%) across all tested source-destination pairs, using sampling-based planning with path shortening and a midpoint-waypoint fallback.
 - Demonstrated a repeatable end-to-end workflow (grasp, transport to liquid handler, dispense, shake, return) 13+ times in sequence at the Spring Validation Demonstration Encore.
 - Awarded a $1,000 grant from the Swartz Center; top 20 applicants for the Gebhardt Sandbox Fund; advanced to round 2 of the McGinnis Venture Competition; showcased at National Robotics Week.
-
----
-
-## Architecture
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/apex_architecture_flow.png" title="System architecture" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">How APEX works: each subsystem, what it does, and the algorithm or model behind it.</div>
-
-
 
 ---
 
