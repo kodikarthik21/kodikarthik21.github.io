@@ -44,8 +44,8 @@ APEX integrates perception, planning, manipulation, and lightweight lab-device A
 
 ## Demo
 
-<div class="video-container" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;">
-  <iframe src="https://drive.google.com/file/d/1aXe5J5QAOAYPAC1xM4ekEIH0kg_-daSt/preview" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+<div class="video-container">
+  <video src="{{ '/assets/video/apex_fvd_annotated.mp4' | relative_url }}" controls muted playsinline preload="metadata" style="width:100%;display:block;"></video>
 </div>
 
 ---
