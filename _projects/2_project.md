@@ -182,6 +182,19 @@ Real systems fail in ways simulation never shows. A few problems we hit and how 
 </div>  
 <div class="caption">Spring Validation Demonstration - with mentor Dr. Min Xu.</div>
 
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/apex_team_with_robot.jpg" title="Team with APEX" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/apex_demo_audience.jpg" title="APEX demo" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/apex_demo_opentrons.jpg" title="APEX with the liquid handler" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">The team with APEX (left), APEX running a demo for visitors (middle), and APEX next to the Opentrons liquid handler (right).</div>
+
 ---
 
 ## Documents
