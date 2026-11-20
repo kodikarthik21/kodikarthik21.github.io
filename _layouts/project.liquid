@@ -88,13 +88,18 @@ layout: default
       <a class="pj-btn primary" href="{{ '/projects/' | relative_url }}"><i class="fa-solid fa-arrow-left"></i> All projects</a>
       {% if page.github %}<a class="pj-btn" href="{{ page.github }}" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>{% endif %}
     </div>
-    {% if page.img %}
-    <div class="pj-cover"><img src="{{ page.img | relative_url }}" alt="{{ page.title }}"></div>
-    {% endif %}
   </header>
 
   <article class="pj-body" id="pj-body">
-    {{ content }}
+    {%- capture cover -%}{% if page.img %}<div class="pj-cover"><img src="{{ page.img | relative_url }}" alt="{{ page.title }}"></div>{% endif %}{%- endcapture -%}
+    {%- assign parts = content | split: '<h2' -%}
+    {%- assign cover_at = 1 -%}
+    {%- if parts[1] contains 'id="overview"' -%}{%- assign cover_at = 2 -%}{%- endif -%}
+    {%- for part in parts -%}
+      {%- if forloop.index0 == cover_at -%}{{ cover }}{%- endif -%}
+      {%- if forloop.index0 > 0 -%}<h2{%- endif -%}{{ part }}
+    {%- endfor -%}
+    {%- if parts.size <= cover_at -%}{{ cover }}{%- endif -%}
   </article>
 
   <div class="pj-foot">
