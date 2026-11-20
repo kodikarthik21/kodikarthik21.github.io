@@ -69,7 +69,7 @@ cv:
         score: "4.08/4.0"
         highlights:
           - "Coursework: Generative AI, Robot Autonomy, Computer Vision, Robot Mobility, Manipulation, Estimation and Control."
-          - "APEX, an autonomous laboratory experimentation robot built as my capstone project (perception and planning lead). Mentor: Prof. Min Xu."
+          - "APEX, an autonomous laboratory experimentation robot built as my capstone project (perception, planning and manipulation). Mentor: Prof. Min Xu."
           - "Teaching assistant: Fundamentals of Control, Fundamentals of Robot Control, Robot Kinematics and Dynamics."
 
       - institution: Indian Institute of Technology Madras
